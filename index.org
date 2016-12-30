@@ -1,0 +1,26 @@
+#+SETUPFILE: ~/.emacs.d/org-template/level-0.org
+#+TITLE:Slegetank's Blog
+#+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
+
+* [[file:org/20130305-iOS-bundle.org][iOS插件化开发之bundle]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130305-iOS-bundle.html
+:PUBDATE:  <2013-03-05 Tue>
+:PUBTYPE:  iOS
+:END:
+2013-03-05 | iOS
+
+博客迁移。
+[[file:org/20130305-iOS-bundle.org][Read More...]]
+-----
+* [[file:org/20130304-iOS-plugin.org][iOS插件化开发概述]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130304-iOS-plugin.html
+:PUBDATE:  <2013-03-04 Mon>
+:PUBTYPE:  iOS
+:END:
+2013-03-04 | iOS
+
+博客迁移。
+Bundle的应用，虽然这玩意到现在还是没有什么实用价值。
+[[file:org/20130304-iOS-plugin.org][Read More...]]

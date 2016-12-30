@@ -1,0 +1,5 @@
+#+TITLE: MyBlogOrg
+#+AUTHOR: slegetank
+#+OPTIONS: \n:\n
+
+This repositry stores the blog source files in org format.
