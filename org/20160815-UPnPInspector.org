@@ -1,0 +1,35 @@
+#+TITLE: Mac下安装UPnP Inspector
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2016-08-15 16:12>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Helper
+
+#+BEGIN_COMMENT PREVIEW
+
+迁移。
+
+#+END_COMMENT
+
+由于工作中需要用到[[http://coherence.beebits.net/wiki/UPnP-Inspector][UPnP Inspector]]这个工具，而这个工具在windows下安装非常简单，在Mac下安装却很麻烦，在此记录安装流程。
+
+这个工具依赖于两个其他的库：[[http://coherence.beebits.net/][Coherence]](一个DLNA/UPnP框架)和[[http://www.pygtk.org/][PyGTK]](一个python GUI框架)。
+
+* 安装PyGTK
+
+[[http://sourceforge.net/projects/macpkg/files/PyGTK/2.24.0/PyGTK.pkg/download][PyGTK.pkg]]， 下载完成双击安装。使用pip install会提示仅支持windows。
+
+* 安装Coherence
+
+pip install找不到，直接安装:
+
+#+BEGIN_SRC bash
+  git clone https://github.com/coherence-project/Coherence && cd Coherence && sudo python setup.py install
+#+END_SRC
+
+* 安装UPnP Inspector
+这个pip找不到，git上的库在安装时会依赖pip安装PyGTK，因此也装不成功。用下面的方法安装：
+[[http://ftparmy.com/213856-upnp-inspector.html][Mac UPnP Inspector]] 下载，会得到一个tar文件。解压，sudo python setup.py install安装。
+安装完成后，此时在控制台输入upnp-inspector，即可打开应用了。
+
+Good luck & have fun.

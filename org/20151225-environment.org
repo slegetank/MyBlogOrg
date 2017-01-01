@@ -1,0 +1,105 @@
+#+TITLE: 工作环境配置记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2015-12-25 10:49>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Helper
+
+#+BEGIN_COMMENT PREVIEW
+
+2016-09-03 16:00:04 更新：
+
+将部分配置做成了脚本，happy hacking: [[https://github.com/slegetank/WorkHelper]]
+
+#+END_COMMENT
+
+最近换了台MacBook，工作环境全部需要重新配置。为方便以后查询，特此记录。
+
+* Xcode
+
+看家工具。
+
+**  Alcatraz
+地址：http://alcatraz.io/
+安装：curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/deploy/Scripts/install.sh | sh
+安装完成后，必装的插件有：
+** XVim
+vim指法的效率无需多言。
+** CocoaPods
+配置
+#+BEGIN_SRC C
+  gem sources --remove https://rubygems.org/
+  gem sources -a https://ruby.taobao.org/gem
+  gem sources -l
+  sudo gem install cocoapods
+  gem setup(可以到~/.cocoapods下du -sh 查看进度)
+#+END_SRC
+使用
+在工程目录下 vim Podfile，加入
+#+BEGIN_SRC C
+  platform :ios, '9.2'
+  pod 'SDWebImage', '~> 3.7.5'
+#+END_SRC
+然后pod install
+插件在Xcode 8中已禁用，静观。
+* Terminal
+** iTerm
+地址：http://www.iterm2.com/
+** zsh
+1. chsh -s /bin/zsh
+2. 安装oh my zsh
+#+BEGIN_SRC C
+  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#+END_SRC
+真的比bash好用太多。
+3. z (此脚本目前oh my zsh已提供支持)
+这个脚本是用来支持快速切换常用工作目录的。
+https://github.com/rupa/z/blob/master/z.sh
+将这个脚本放到某个路径，例如/Volumes/Work/z.sh
+然后编辑~/.zshrc，添加代码source /Volumes/Work/z.sh
+这样，它就会自动统计你进入每个路径的次数。你只要使用z xxx，他就会自动匹配出你最常进入的路径（z -l可以查看统计）。
+4. themes
+http://iterm2colorschemes.com/
+已整合入脚本。
+** Homebrew
+Mac系统里缺了很多工具，可以使用这个进行方便的安装。
+地址：http://brew.sh/
+安装：ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+工具列表：brew install wget
+已整合入脚本。
+* Git
+sourcetree
+地址： https://www.sourcetreeapp.com/
+免费好用的git客户端。软件免费，但是不注册的话有试用期。
+注册地址：https://id.atlassian.com/signup
+许可证生成地址：https://my.atlassian.com/license/sourcetree
+也可以使用我自己的许可证地址：license
+* Emacs
+最强大的编辑器之一，org mode强大好用。
+纯净版地址：http://emacsformacosx.com/
+配置地址： https://github.com/slegetank/Private-Emacs-Config
+* Python
+** pip
+安装： https://bootstrap.pypa.io/get-pip.py 
+** 其他包
+requests
+已整合入脚本。
+*  其他
+| Name          | Comment          |
+| QQ            |                  |
+| FireFox       |                  |
+| 坚果云        |                  |
+| sougou        |                  |
+| Dash          | 文档             |
+| PAW           | http测试工具     |
+| OmniGraffle   | 流程图等图表专用 |
+| LICEcap       | gif录制          |
+| Meld          | 文件对比工具     |
+| VMWare Fusion | 虚拟机           |
+| mpv           | 播放器           |
+| SecureCRT     | 远程终端         |
+| Screenflick   | 屏幕录制         |
+| Soundflower   | 虚拟声卡         |
+| Boxer         | Dos游戏模拟器    |
+| Nestopia      | nes模拟器        |
+| DeSmuME       | des模拟器        |

@@ -2,25 +2,213 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
-* [[file:org/20130305-iOS-bundle.org][iOS插件化开发之bundle]]
+* [[file:org/20161120-AmericaPoliticalCutlture.org][权力是靠不住的 - 美国政治文化探析 读后总结]]
 :PROPERTIES:
-:RSS_PERMALINK: org/20130305-iOS-bundle.html
+:RSS_PERMALINK: org/20161120-AmericaPoliticalCutlture.html
+:PUBDATE:  <2016-11-20 Sun>
+:END:
+2016-11-20 | book
+
+迁移。
+[[file:org/20161120-AmericaPoliticalCutlture.org][Read More...]]
+-----
+* [[file:org/20170101-chinafoundworld.org][从海图中所读到的历史--《1421年中国发现世界》读后总结]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20170101-chinafoundworld.html
+:PUBDATE:  <2016-11-12 Sat>
+:END:
+2016-11-12 | book
+
+
+迁移。
+
+[[file:org/20170101-chinafoundworld.org][Read More...]]
+-----
+* [[file:org/20160925-emacstips.org][翻译：Lisp Style Tips for the Beginner - Heinrich Taube]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160925-emacstips.html
+:PUBDATE:  <2016-09-25 Sun>
+:END:
+2016-09-25 | emacs
+
+
+迁移。翻译。
+
+[[file:org/20160925-emacstips.org][Read More...]]
+-----
+* [[file:org/20160825-iOSSign.org][iOS代码签名理解]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160825-iOSSign.html
+:PUBDATE:  <2016-08-25 Thu>
+:END:
+2016-08-25 | iOS
+
+
+迁移。尝试用openssl解释苹果的签名行为。
+
+[[file:org/20160825-iOSSign.org][Read More...]]
+-----
+* [[file:org/20160815-UPnPInspector.org][Mac下安装UPnP Inspector]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160815-UPnPInspector.html
+:PUBDATE:  <2016-08-15 Mon>
+:END:
+2016-08-15 | Helper
+
+
+迁移。
+
+[[file:org/20160815-UPnPInspector.org][Read More...]]
+-----
+* [[file:org/20160721-block.org][Objective-C Block]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160721-block.html
+:PUBDATE:  <2016-07-21 Thu>
+:END:
+2016-07-21 | iOS
+
+
+迁移。
+
+[[file:org/20160721-block.org][Read More...]]
+-----
+* [[file:org/20160716-WutheringHeights.org][输了你，赢了世界又如何 -- 呼啸山庄读后感]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160716-WutheringHeights.html
+:PUBDATE:  <2016-07-16 Sat>
+:END:
+2016-07-16 | Book
+
+
+迁移。
+
+[[file:org/20160716-WutheringHeights.org][Read More...]]
+-----
+* [[file:org/20160312-CrimeandPunishment.org][当已无路可走 - 罪与罚读后总结]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160312-CrimeandPunishment.html
+:PUBDATE:  <2016-03-12 Sat>
+:END:
+2016-03-12 | Book
+
+
+迁移。
+
+[[file:org/20160312-CrimeandPunishment.org][Read More...]]
+-----
+* [[file:org/20160216-Shakespeare.org][反映人生，揭示善恶 - 莎士比亚四大悲剧读后总结]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20160216-Shakespeare.html
+:PUBDATE:  <2016-02-16 Tue>
+:END:
+2016-02-16 | Book
+
+
+迁移。
+
+[[file:org/20160216-Shakespeare.org][Read More...]]
+-----
+* [[file:org/20151225-environment.org][工作环境配置记录]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20151225-environment.html
+:PUBDATE:  <2015-12-25 Fri>
+:END:
+2015-12-25 | Helper
+
+
+2016-09-03 16:00:04 更新：
+
+将部分配置做成了脚本，happy hacking: [[https://github.com/slegetank/WorkHelper]]
+
+[[file:org/20151225-environment.org][Read More...]]
+-----
+* [[file:org/20151122-AdventuresOfHuckleberryFinn.org][我就下地狱吧 -- 哈克贝利费恩历险记读后总结]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20151122-AdventuresOfHuckleberryFinn.html
+:PUBDATE:  <2015-11-22 Sun>
+:END:
+2015-11-22 | Book
+
+
+迁移。
+
+[[file:org/20151122-AdventuresOfHuckleberryFinn.org][Read More...]]
+-----
+* [[file:org/20130705-selfview.org][立场决定观点 --关于政治历史事件的个人立场]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130705-selfview.html
+:PUBDATE:  <2013-07-05 Fri>
+:END:
+2013-07-05 | HP
+
+
+迁移。这是我对于文史哲的基本世界观，简单的说就是“屁股决定脑袋”。
+
+[[file:org/20130705-selfview.org][Read More...]]
+-----
+* [[file:org/20130420-unittest.org][iOS开发之单元测试]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130420-unittest.html
+:PUBDATE:  <2013-04-20 Sat>
+:END:
+2013-04-20 | iOS
+
+
+迁移。惭愧，这个一直没能实践。
+
+[[file:org/20130420-unittest.org][Read More...]]
+-----
+* [[file:org/20130407-staticLibrary.org][iOS开发之静态链接库]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130407-staticLibrary.html
+:PUBDATE:  <2013-04-07 Sun>
+:END:
+2013-04-07 | iOS
+
+迁移
+[[file:org/20130407-staticLibrary.org][Read More...]]
+-----
+* [[file:org/20130403-Agile.org][开发人员修养--敏捷]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130403-Agile.html
+:PUBDATE:  <2013-04-03 Wed>
+:END:
+2013-04-03 | SE
+
+
+迁移。敏捷追求高效，手段反而是其次，重要的是思想。
+
+[[file:org/20130403-Agile.org][Read More...]]
+-----
+* [[file:org/20130401-MVC.org][iOS开发基础之MVC模式]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130401-MVC.html
+:PUBDATE:  <2013-04-01 Mon>
+:END:
+2013-04-01 | iOS
+
+
+迁移。App程序员的必备知识。
+
+[[file:org/20130401-MVC.org][Read More...]]
+-----
+* [[file:org/20130305-bundle.org][iOS插件化开发之bundle]]
+:PROPERTIES:
+:RSS_PERMALINK: org/20130305-bundle.html
 :PUBDATE:  <2013-03-05 Tue>
-:PUBTYPE:  iOS
 :END:
 2013-03-05 | iOS
 
 博客迁移。
-[[file:org/20130305-iOS-bundle.org][Read More...]]
+[[file:org/20130305-bundle.org][Read More...]]
 -----
-* [[file:org/20130304-iOS-plugin.org][iOS插件化开发概述]]
+* [[file:org/20130304-plugin.org][iOS插件化开发概述]]
 :PROPERTIES:
-:RSS_PERMALINK: org/20130304-iOS-plugin.html
+:RSS_PERMALINK: org/20130304-plugin.html
 :PUBDATE:  <2013-03-04 Mon>
-:PUBTYPE:  iOS
 :END:
 2013-03-04 | iOS
 
 博客迁移。
 Bundle的应用，虽然这玩意到现在还是没有什么实用价值。
-[[file:org/20130304-iOS-plugin.org][Read More...]]
+[[file:org/20130304-plugin.org][Read More...]]

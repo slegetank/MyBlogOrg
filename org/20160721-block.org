@@ -1,0 +1,34 @@
+#+TITLE: Objective-C Block
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2016-07-21 14:52>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: iOS
+
+#+BEGIN_COMMENT PREVIEW
+
+迁移。
+
+#+END_COMMENT
+
+OC中block的语法实在是太别扭了，不知道是不是我太孤陋寡闻了。。。在此记录一下，以供日后查找使用。
+
+引用：http://goshdarnblocksyntax.com
+
+#+BEGIN_SRC Objective-C
+  As a local variable:
+  returnType (^blockName)(parameterTypes) = ^returnType(parameters) {...};
+
+  As a property:
+  @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
+
+  As a method parameter:
+  - (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;
+
+  As an argument to a method call:
+  [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
+
+  As a typedef:
+  typedef returnType (^TypeName)(parameterTypes);
+  TypeName blockName = ^returnType(parameters) {...};
+#+END_SRC

@@ -15,7 +15,7 @@ IOS插件开发最重要的一个技术点就是bundle的应用。一共有两�
     根据网上资料，没有提到bundle用于IOS（用于MAC），并且在新建工程时也没有IOS bundle的选项。因而，要直接构建，需要先选择构建MAC bundle，然后修改配置来达到这一目的。
 
     首先，构建一个MAC bundle工程，如下所示：
-   [[file:../static/20130305-iOS-bundle-1.png]]
+   [[file:../static/20130305-bundle-1.png]]
 
     步骤完成后，进入工程主界面。双击target，打开构建配置界面，将使用的SDK由MAC的变为IOS的（别忘了将Configuration项改为“All Configurations”）：
 
@@ -24,7 +24,7 @@ IOS插件开发最重要的一个技术点就是bundle的应用。一共有两�
     然后向工程中添加自己所需的源文件就可以了。
 2. 在普通IOS工程中添加bundle target
     新建一个IOS工程，在主界面右击Groups&Files中的任一项，如下选择：
-   [[file:../static/20130305-iOS-bundle-2.png]]
+   [[file:../static/20130305-bundle-2.png]]
 
     完成后，xcode会自动打开配置界面，搜索“app”，将“other linker flags”和"GCC_PREFIX_HEADER"的值删除（很好找，粗体）。
 
