@@ -1,0 +1,30 @@
+#+SETUPFILE: ~/.emacs.d/org-template/level-0.org
+#+TITLE:Slegetank's Blog
+#+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
+
+* 2017
+** [[file:blog/20170108-blogWithEmacs.org][2017-01-08 Blog With Emacs]]
+
+* 2016
+** [[file:blog/20161120-AmericaPoliticalCutlture.org][2016-11-20 权力是靠不住的 - 美国政治文化探析 读后总结]]
+** [[file:blog/20161112-chinafoundworld.org][2016-11-12 从海图中所读到的历史--《1421年中国发现世界》读后总结]]
+** [[file:blog/20160925-emacstips.org][2016-09-25 翻译：Lisp Style Tips for the Beginner - Heinrich Taube]]
+** [[file:blog/20160825-iOSSign.org][2016-08-25 iOS代码签名理解]]
+** [[file:blog/20160815-UPnPInspector.org][2016-08-15 Mac下安装UPnP Inspector]]
+** [[file:blog/20160721-block.org][2016-07-21 Objective-C Block]]
+** [[file:blog/20160716-WutheringHeights.org][2016-07-16 输了你，赢了世界又如何 -- 呼啸山庄读后感]]
+** [[file:blog/20160312-CrimeandPunishment.org][2016-03-12 当已无路可走 - 罪与罚读后总结]]
+** [[file:blog/20160216-Shakespeare.org][2016-02-16 反映人生，揭示善恶 - 莎士比亚四大悲剧读后总结]]
+
+* 2015
+** [[file:blog/20151225-environment.org][2015-12-25 工作环境配置记录]]
+** [[file:blog/20151122-AdventuresOfHuckleberryFinn.org][2015-11-22 我就下地狱吧 -- 哈克贝利费恩历险记读后总结]]
+
+* 2013
+** [[file:blog/20130705-selfview.org][2013-07-05 立场决定观点 --关于政治历史事件的个人立场]]
+** [[file:blog/20130420-unittest.org][2013-04-20 iOS开发之单元测试]]
+** [[file:blog/20130407-staticLibrary.org][2013-04-07 iOS开发之静态链接库]]
+** [[file:blog/20130403-Agile.org][2013-04-03 开发人员修养--敏捷]]
+** [[file:blog/20130401-MVC.org][2013-04-01 iOS开发基础之MVC模式]]
+** [[file:blog/20130305-bundle.org][2013-03-05 iOS插件化开发之bundle]]
+** [[file:blog/20130304-plugin.org][2013-03-04 iOS插件化开发概述]]

@@ -1,0 +1,40 @@
+#+TITLE: elisp学习记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-01-23 08:41>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+重读 An Introduction to Programming in Emacs Lisp，记录下新的知识。
+
+#+END_COMMENT
+
+Lisp程序由列表和原子组成；列表由列表或原子（atoms）组成，原子可能是符号、字符串或者数字。
+quote告诉解释器对后面的列表什么都不做。
+变量和函数使用相互隔离的命名空间。
+
+解释器执行计算的方式是：
+1 列表前面是否有单引号(quote)，如果是解释器将会返回符号本身。
+2 如果没有单引号，解释器将检查第一个元素是否有函数定义（或者macro、special form）。有则执行其所指向的函数定义，否则打印错误信息。
+3 如果列表第一个元素为函数（非特殊形式），则检查后面的参数里是否有列表，如果有则从里向外依次执行解释流程。
+4 执行顺序从左向右。
+3 如果执行的语句没有括号，则当做变量执行。
+
+由上可知，用于赋值的函数set：
+
+#+BEGIN_SRC emacs-lisp
+  (set 'flowers '(rose violet daisy buttercup))
+#+END_SRC
+
+流程如下：
+
+1 语句为列表。
+2 第一个元素set为函数。
+3 参数是否有列表，发现没有，则依次从左向右执行。
+4 带quote的参数返回符号本身。
+
+因此，其中的两个quote都不可缺少(特别是第一个)；否则，将会首先计算参数的值，这会触发错误。
+
+setq是set的特殊形式，它自动将第一个参数进行了quote，并且允许多参数赋值。

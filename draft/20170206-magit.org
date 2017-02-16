@@ -1,0 +1,95 @@
+#+TITLE: Magit - Magic-git-tool for Emacs
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-02-06 16:01>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+作为emacs里git代码管理的杀手级插件，其强大毋庸置疑。
+
+#+END_COMMENT
+
+* Magit
+官方文档：https://magit.vc/manual/magit/index.html#Top
+官方常用功能文档：https://magit.vc/manual/magit-refcard.pdf
+spacemacs git layer文档：https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bsource-control/git#quick-guide-for-recurring-use-cases-in-magit
+* 安装及配置
+配置依然按照我的习惯：
++ 使用package管理包
++ vi键位
++ 使用leader键
+
+所以：
+将magit、evil-magit加入package-selected-packages，并将status页面绑定到gs按键上:
+#+BEGIN_SRC emacs-lisp
+  (require 'evil-magit)
+  (evil-leader/set-key "gs" 'magit-status)
+#+END_SRC
+这样，环境就配置完了。(evil-magit：https://github.com/justbur/evil-magit， 将magit适配了evil)
+* git status
+M-x magit-status或 空格+gs打开status页面，q退出。
+status页面是magit的入口，其作用相当于git status，可以看到对比图：
+[[file:../static/20170206-magit-1.png]]
+
+看起来差不多。但是magit提供了更方便的方式来对文件的修改进行访问以及操作。
+** 访问
+每类文件都有4个展示等级，快捷键分别为1 2 3 4 :
+[[file:../static/20170206-magit-2.gif]]
+
+其中2（展示文件层）和4（展示修改细节）常用。
+
+通过j k上下移动光标(C-j C-k按块移动光标)，在文件上（或任何上一级项上）按tab将会展示其细节。
+** 操作
+具体见[[https://github.com/justbur/evil-magit][evil-magit]]， 这里只列出常用的一部分：
+| 快捷键 | 功能          |
+| s/u    | stage/unstage |
+| c      | commit        |
+| p      | push          |
+| x      | discard       |
+| X      | untrack       |
+| v      | select        |
+| b      | branch        |
+| fu     | fetch         |
+| Fu     | pull          |
+| r/ru   | rebase        |
+| o/O    | reset         |
+| i      | ignore        |
+| zz/zp  | stash         |
+| l      | log           |
+| gr     | refresh       |
+| $      | show git code |
+| m      | merge         |
+
+下面分别进行描述(对于像cc这种两个按键的，实际上是有popup提示的，所以记不住也没关系)：
+*** stage/unstage
+直接对文件进行stage/unstage，即对文件进行s/u：
+[[file:../static/20170206-magit-3.gif]]
+
+对块进行stage/unstage，即对块进行s/u:
+[[file:../static/20170206-magit-4.gif]]
+*** commit/push
+stage完之后，按cc进行提交，此时会打开新的buffer，在其中编写commit message，C-c C-c提交，C-c C-k取消。
+cc - commit
+ca - amend
+*** select
+magit允许同时对多项进行操作：
+[[file:../static/20170206-magit-5.gif]]
+
+*** branch
+bb - checkout
+bc - checkout new branch
+
+* git log
+在status页面按ll就进入了log页面，大概相当于
+#+BEGIN_SRC emacs-lisp
+  git log --pretty=format:"%h * %s %an %ar"
+#+END_SRC
+可以看到对比图：
+[[file:../static/20170206-magit-6.png]]
+
+
+* Work Flow
+** commit
+

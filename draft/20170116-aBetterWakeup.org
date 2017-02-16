@@ -1,0 +1,13 @@
+#+TITLE: 更好的闹钟
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-01-16 13:46>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: other
+
+#+BEGIN_COMMENT PREVIEW
+
+#+END_COMMENT
+
+cloud api web: http://cloud.youku.com/app
+

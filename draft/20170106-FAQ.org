@@ -1,0 +1,63 @@
+#+TITLE: emacs常见问题整理
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-01-06 17:27>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+emacs配置常见的问题整理。
+
+#+END_COMMENT
+
+* emacs25在windows上卡顿
+垃圾回收太频繁。
+[[https://www.reddit.com/r/emacs/comments/55ork0/is_emacs_251_noticeably_slower_than_245_on_windows/?st=ixl6iw4r&sh=256da377]]
+
+#+BEGIN_SRC emacs-lisp
+  (setq gc-cons-threshold (* 511 1024 1024))
+  (setq gc-cons-percentage 0.5)
+  (run-with-idle-timer 5 t #'garbage-collect)
+  (setq garbage-collection-messages t)
+#+END_SRC
+
+* 学习emacs入门书 & 路线图
+http://xlambda.com/blog/2013/01/08/the-pragmatic-emacser/
+* org-edit-special 编辑代码卡顿
+行号会造成卡顿。替代方案有：
+1. 隐藏行号，只在想要goto-line的时候显示。
+    见 http://whattheemacsd.com What are those line numbers for anyway?
+
+    #+BEGIN_SRC emacs-lisp
+    ;; 隐藏行号 会导致org mode编辑代码卡顿
+    (global-linum-mode 0)
+
+    ;; 暂时显示行号
+    (global-set-key [remap goto-line] 'goto-line-with-feedback)
+
+    (defun goto-line-with-feedback ()
+        "Show line numbers temporarily, while prompting for the line number input"
+        (interactive)
+        (unwind-protect
+            (progn
+            (linum-mode 1)
+            (goto-line (read-number "Goto line: ")))
+        (linum-mode -1)))
+    #+END_SRC
+2. 使用avy-goto-line
+   适合vim用户。
+* 是否应该禁掉emacs自带的backup功能
+备份文件大多数情况下并没有用而且很烦人。但这是有意义的--我被这救过。不当的操作导致当前的buffer被覆盖，并且保存到了硬盘上。这时才明白，backup有多重要。更好的额选择是将备份文件放到一个指定的文件夹里。
+#+BEGIN_SRC emacs-lisp
+  ;; Write backup files to own directory
+  (setq backup-directory-alist
+        `(("." . ,(expand-file-name
+                   (concat user-emacs-directory "backups")))))
+
+  ;; Make backups of files, even when they're in version control
+  (setq vc-make-backup-files t)
+
+  ;; not good choice
+  ;; (setq make-backup-files nil)
+#+END_SRC

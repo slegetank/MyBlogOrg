@@ -1,0 +1,29 @@
+#+TITLE: 2017年的小目标
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-02-03 10:50>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: other
+
+#+BEGIN_COMMENT PREVIEW
+
+新的一年又开始了，一晃毕业已经6个年头了。新年新气象，订一下新一年的小目标 ￣▽￣
+
+#+END_COMMENT
+
+* 生活
+** 找个女盆友
+遭不住了
+** 六块腹肌
+*** 体重140
+*** 半马
+* 学习
+** 一定要把SICP看完！！！
+** 建站
+*** 博客使用emacs生成静态站
+*** 租用服务器 使用python写一些有趣的服务
+* 读书
+5本吧，去年差不多也这个进度。。主要那几本文学名著要看一下，现在买的书有点多了。
+* 不务正业
+** dota 4000
+** 录一个单机游戏视频

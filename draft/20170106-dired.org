@@ -1,0 +1,31 @@
+#+TITLE: 如何优雅的使用dired
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-01-06 14:33>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+Dired作为emacs的目录管理工具，必学。
+
+#+END_COMMENT
+* 扩展
+dired+。
+** keys
++ ( 显示、隐藏详细信息
++ s alpha/beta - date 排序
++ i 在同一个窗口里打开下一级目录
+* keys
++ q 退出
++ C copy
++ R 重命名
++ D 删除
++ + 创建路径
++ Z 压缩、解压缩文件
++ o 在另一个窗口打开
++ m 标记
++ %m 正则标记，例如\.org将会标记目录下所有org mode文件
++ u 去除标记
++ U 去除所有标记
+
