@@ -7,7 +7,7 @@
 
 #+BEGIN_COMMENT PREVIEW
 
-本文讲讨论如何用emacs优雅的写博客。
+本文讨论如何优雅的用emacs写博客。
 
 #+END_COMMENT
 
