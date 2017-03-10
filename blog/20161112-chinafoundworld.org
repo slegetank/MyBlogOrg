@@ -54,16 +54,16 @@
 
 [[https://en.wikipedia.org/wiki/Fra_Mauro][弗拉·毛罗地图 ]]：原图上南下北，此图已做反转，可以看到好望角以东、印度洋、中国海岸线的存在。
 
-[[file:../static/20170101-chinafoundworld-1.jpg]]
+[[file:../static/20161112-chinafoundworld-1.jpg]]
 
 [[https://en.wikipedia.org/wiki/Gangnido][混一疆理历代国都之图（龙谷版）]]， 可以看到当时对于非洲海岸的描述，以及未被正确绘制的几内亚湾（以及巨大的朝鲜和缩小的日本^_^）：
 
 
-[[file:../static/20170101-chinafoundworld-2.jpg]]
+[[file:../static/20161112-chinafoundworld-2.jpg]]
 
 [[https://en.wikipedia.org/wiki/Piri_Reis_map][皮里·雷斯地图]]， 左侧的陆地为南北美洲，下方陆地为南极洲，右侧陆地为非洲西岸以及好望角。
 
-[[file:../static/20170101-chinafoundworld-3.png]]
+[[file:../static/20161112-chinafoundworld-3.png]]
 
 根据洋流，船队到达了美洲海域，周闻驶向北美，洪宝、周满驶向南美。
 
@@ -86,7 +86,7 @@
 3. 一艘船的遗骸的船木以及其他一些传说。
 [[https://en.wikipedia.org/wiki/Jean_Rotz][让·罗茨地图]]， 可以看到右侧部分所绘制的印度洋、东南亚、以及下方澳洲的北部。
 
-[[file:../static/20170101-chinafoundworld-4.jpg]]
+[[file:../static/20161112-chinafoundworld-4.jpg]]
 
 ** 澳大利亚
 
@@ -127,7 +127,7 @@
 4. 植物证据--原产于中美洲的植物，在大航海之前已经在世界各地传播了。复活节岛上发现红薯、西红柿和木瓜；夏威夷有红薯，中国、菲律宾都有玉米。
 [[https://de.wikipedia.org/wiki/Martin_Waldseemüller][瓦尔德塞米勒世界地图]]， 可以看到美洲的太平洋沿岸：
 
-[[file:../static/20170101-chinafoundworld-5.jpg]]
+[[file:../static/20161112-chinafoundworld-5.jpg]]
 
 ** 中美洲
 
@@ -155,11 +155,11 @@
 2. 坎提诺(Cantino)航海图（1502）。“但是尽管此图在描绘非洲海岸和印度洋及其群岛时反映出非凡的准确性，但一眼即可看出它在描绘加勒比海域时所表现的缺憾。很多岛屿与实际的尺寸和形状似乎没有什么关联。我对于图中为什么会有如此之多的错误而困惑。...1421年的海平面是要比现在低的。全球气候变暖使极地冰层融化，缓慢而无情地抬升着海平面。...当我调整现代的航海图以表现海平面以下180公分的等深线时，加勒比海群岛之间很多浅的礁湖都变成了干的陆地，而当我将调整后的海图叠加到坎提诺图上的时候，很明显，加勒比海的准确绘制令人难以置信。就如同它在6个世纪之前出现在所经过的水手前时一模一样。”“为了使坎提诺航海图和皮瑞·雷斯航海图达到显著的准确性和丰富的细节，只是为考察印度洋便至少要求30条船，更不用说南美洲、南极洲和非洲了。无论是葡萄牙人还是西班牙人都不可能派遣如此众多而庞大的舰队同时去世界不同的部分。只有中国有这么多的船只、资源和专业技术去做这样的事情。中国宝船上的制图师应该就是这些非凡航海图的原创者。”
 [[https://en.wikipedia.org/wiki/Zuane_Pizzigano][匹兹加诺海图]]， 可以看出英吉利海峡、伊比利亚半岛、直布罗陀海峡等欧洲西海岸地标。但我不知道作者提到的四个岛屿具体指哪里，应该是最左侧的那一块吧。
 
-[[file:../static/20170101-chinafoundworld-6.jpg]]
+[[file:../static/20161112-chinafoundworld-6.jpg]]
 
 [[https://en.wikipedia.org/wiki/Cantino_planisphere][坎提诺海图]]， 可以看到美洲东海岸，非洲海岸、印度洋：
 
-[[file:../static/20170101-chinafoundworld-7.jpg]]
+[[file:../static/20161112-chinafoundworld-7.jpg]]
 
 ** 北美洲
 
@@ -180,7 +180,7 @@
 3. 中国明史专家李约瑟（Needham）教授说格陵兰、冰岛分散地存在着超过20处的有关中国人的记录，这些表明了他们的确到过北极。
 [[https://en.wikipedia.org/wiki/Vinland_map][文兰海图]]， 可以看到冰岛、格陵兰岛：
 
-[[file:../static/20170101-chinafoundworld-8.jpg]]
+[[file:../static/20161112-chinafoundworld-8.jpg]]
 
 * 其他知识
 
