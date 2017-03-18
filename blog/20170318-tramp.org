@@ -1,0 +1,83 @@
+#+TITLE: TRAMP学习记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-03-18 16:57>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+TRAMP是emacs远程编辑的神器，在此记录，以便以后查阅。
+
+#+END_COMMENT
+
+TRAMP是Transparent Remote file Access, Multiple Protocol的缩写，wiki在这里[[http://wikemacs.org/wiki/TRAMP][TRAMP]]。 最近由于学习需要，租了一台服务器，这样，远程编辑的功能也成了一种迫切需求。因此，TRAMP搞起！
+
+当我们尝试用dired或者find-file连接远程目录、文件时，就会自动调用tramp-mode。如果不经过配置，每次都选择要使用的协议，输入host、密码还是很烦人的，因此需要进行一些配置。如下。
+
+* 配置
+** emacs
+首先，将TRAMP远程默认协议设为sshx。
+#+BEGIN_SRC emacs-lisp
+  (setq tramp-default-method "sshx")
+#+END_SRC
+
+sshx的解释在这里 [[https://www.gnu.org/software/tramp/][sshx]] :
+
+“Works like ssh but without the extra authentication prompts. sshx uses ‘ssh -t -t host -l user /bin/sh’ to open a connection with a “standard” login shell.”
+
+这会让登录的流程更干净。然后，将TRAMP补全的方法做这样的设置：
+
+#+BEGIN_SRC emacs-lisp
+  (tramp-set-completion-function "sshx"
+                                 '((tramp-parse-sconfig "/etc/ssh_config")
+                                   (tramp-parse-sconfig "~/.ssh/config")))
+#+END_SRC
+
+这样，emacs这边就配置完了。
+
+** ssh
+编辑~/.ssh/config文件，在里面按照这种格式添加内容:
+#+BEGIN_SRC C
+  Host short-name-one
+  HostName your-host-name-one.com
+  User your-user-one
+
+  Host short-name-two
+  HostName your-host-name-two.com
+  User your-user-two
+#+END_SRC
+
+例如我的：
+#+BEGIN_SRC C
+  Host mywebsite
+  HostName slegetank.com
+  User root
+#+END_SRC
+
+这表示"mywebsite"所对应的host是“slegetank.com”,用户名是"root"。
+** password
+官方文档在这里：[[https://www.gnu.org/software/emacs/manual/html_node/tramp/Password-handling.html][password]] 。
+虽然emacs会缓存密码一段时间，但是对于常用的远程链接，我还是希望能够不用输入密码。一种方法自然是用ssh自己的证书登录方式；而emacs也提供了自己的认证信息管理机制。我这里用最简单的明文保存方式。
+
+在用户目录下建立文件.authinfo，并且保存如下格式的信息：
+
+#+BEGIN_SRC C
+  machine short-name-one port ssh login your-user-one password your-password
+#+END_SRC
+
+例如我的：
+
+#+BEGIN_SRC C
+  machine mywebsite port sshx login root password xxx
+#+END_SRC
+
+这表示对于"mywebsite"的sshx协议的root用户的密码是xxx。当然，这种方式是不安全的，应该用pgp对该文件进行加密，加密文件的默认路径为~/.authinfo.gpg，具体密码文件查询路径见变量auth-sources。
+* 使用
+使用dired或find-file，在mini-buffer输入两个斜杠，此时会提示用户输入要使用的协议。这时输入"mywebsite"会发现有提示信息。回车，如果你上面的配置都正确的话，则会自动打开远程服务器的根目录；tab则可以输入要访问的文件、目录。
+* 更多
+Projectile据说跟TRAMP有冲突，会出现卡死的情况，我没遇到过，不过先记在这里。
+#+BEGIN_SRC emacs-lisp
+  (defadvice projectile-project-root (around ignore-remote first activate)
+    (unless (file-remote-p default-directory) ad-do-it))
+#+END_SRC
