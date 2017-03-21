@@ -119,8 +119,7 @@ emacs原始的排序只有根据字符和modify time进行排序；有一个插�
 这样，我们就可以自定义排序了，具体效果是这样的：
 [[file:../static/20170106-dired-0.gif]]
 * 书签
-跟书签配合之后，在访问远程路径的时候特别方便。借鉴了这篇文章：[[http://scottfrazersblog.blogspot.sg/2009/12/emacs-using-bookmarked-directories.html
-][Emacs: Using Bookmarked Directories]] 。
+跟书签配合之后，在访问远程路径的时候特别方便。借鉴了这篇文章：[[http://scottfrazersblog.blogspot.sg/2009/12/emacs-using-bookmarked-directories.html][Emacs: Using Bookmarked Directories]]。
 如果TRAMP配置合适的话，可以达到一键远程访问的效果：
 [[file:../static/20170106-dired-2.gif]]
 * wdired
