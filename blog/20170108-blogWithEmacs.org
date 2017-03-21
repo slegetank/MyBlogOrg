@@ -29,11 +29,11 @@
 
 ** 例子
 这里列出一些emacser博客的例子，以备查阅。
-https://writequit.org
-http://tuhdo.github.io
-http://jixiuf.github.io
-http://oremacs.com
-http://gongzhitaao.org/dotemacs/
++ https://writequit.org
++ http://tuhdo.github.io
++ http://jixiuf.github.io
++ http://oremacs.com
++ http://gongzhitaao.org/dotemacs/
 * 基础
 用emacs写博客的实质就是编写org mode文件，然后通过emacs导出成为静态网站。因此，首先需要用户熟练使用org mode编写文档；当然，如果懂得elisp就可以做更多的自定义配置。
 博客的发布是通过ox-publish这个库完成的，其中核心是[[http://orgmode.org/manual/Project-alist.html#Project-alist][org-publish-project-alist]] 这个alist; 关于博客发布的基础知识参照[[http://orgmode.org/manual/Publishing.html][这里]]； 具体的例子可以参看我的[[https://github.com/slegetank/.emacs.d/blob/master/init/init-blog.org][emacs博客配置]] 。
