@@ -11,10 +11,14 @@
 
 #+END_COMMENT
 
-* Magit
-官方文档：https://magit.vc/manual/magit/index.html#Top
-官方常用功能文档：https://magit.vc/manual/magit-refcard.pdf
-spacemacs git layer文档：https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bsource-control/git#quick-guide-for-recurring-use-cases-in-magit
+* 为什么
++ emacs内置，可以与文件编辑无缝操作。
++ 相比于命令行，对于提交内容的编辑操作更方便。
+
+当然，相比于现在流行的一些git客户端，magit还是没有什么特别的优势。但就像emacs每个其他的功能一样，如果你不是emacser，那么这就不是必须；否则就是你很好的帮手。
+
+本文将关注Magit在具体使用上的内容，而不会过多牵涉git的知识。
+
 * 安装及配置
 配置依然按照我的习惯：
 + 使用package管理包
@@ -23,7 +27,7 @@ spacemacs git layer文档：https://github.com/syl20bnr/spacemacs/tree/master/la
 
 所以：
 将magit、evil-magit加入package-selected-packages，并将status页面绑定到gs按键上:
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC sh
   (require 'evil-magit)
   (evil-leader/set-key "gs" 'magit-status)
 #+END_SRC
@@ -61,6 +65,7 @@ status页面是magit的入口，其作用相当于git status，可以看到对�
 | gr     | refresh       |
 | $      | show git code |
 | m      | merge         |
+| AA     | cherry-pick   |
 
 下面分别进行描述(对于像cc这种两个按键的，实际上是有popup提示的，所以记不住也没关系)：
 *** stage/unstage
@@ -80,16 +85,35 @@ magit允许同时对多项进行操作：
 *** branch
 bb - checkout
 bc - checkout new branch
-
 * git log
 在status页面按ll就进入了log页面，大概相当于
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC sh
   git log --pretty=format:"%h * %s %an %ar"
 #+END_SRC
 可以看到对比图：
 [[file:../static/20170206-magit-6.png]]
 
+在每个提交上，按回车就可以查看这个提交的详细信息，大概相当于
+#+BEGIN_SRC sh
+git show xxx --pretty=fuller
+#+END_SRC
 
-* Work Flow
-** commit
+1-4对于这个页面也同样有效。
+
+** 操作
+*** rebase interactive
+即git rebase -i，magit里变得稍微方便了一点:
+[[file:../static/20170206-magit-6.gif]]
+
+在log页面选择squash开始的commit，然后流程跟命令行也差不多。
+
+*** reset
+log页面另一个主要功能就是代码回滚了：
+[[file:../static/20170206-magit-7.gif]]
+
+* 参考资料
++ 官方文档：https://magit.vc/manual/magit/index.html#Top
++ 官方常用功能文档：https://magit.vc/manual/magit-refcard.pdf
++ spacemacs git layer文档：https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bsource-control/git#quick-guide-for-recurring-use-cases-in-magit
+
 
