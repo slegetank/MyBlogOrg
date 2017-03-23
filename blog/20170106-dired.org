@@ -1,7 +1,7 @@
 #+TITLE: 如何优雅的使用Dired
 #+AUTHOR: slegetank
 #+EMAIL: slege_tank@163.com
-#+DATE: <2017-01-06 14:33>
+#+date: <2017-03-23 14:50>
 #+SETUPFILE: ~/.emacs.d/org-template/level-1.org
 #+blogtype: Emacs
 
@@ -127,6 +127,72 @@ emacs原始的排序只有根据字符和modify time进行排序；有一个插�
 [[file:../static/20170106-dired-1.gif]]
 
 当操作不是很复杂的时候可以用正则来匹配操作，而当比较复杂的时候就可以用这个功能了，高效、强大。
+
+* 最近访问
+打开最近访问的目录是比较常用的一个功能。在shell里也有[[https://github.com/rupa/z][z]]、 [[https://github.com/clvv/fasd][fasd]] 这些快速打开路径的命令。而emacs内置的recentf则可为我们提供方便的最近访问路径功能，当然还是需要一些配置才能变得更好用。这里是[[https://www.emacswiki.org/emacs/RecentFiles#toc21][wiki]] 。
+对于这个问题我最初查到的答案在这里：[[http://blog.binchen.org/posts/use-ivy-to-open-recent-directories.html][陈斌的解决方案]] 。因此很简单的，我把其中fasd的部分去掉就可以用了：
+#+BEGIN_SRC emacs-lisp
+  (require 'ivy) ; swiper 7.0+ should be installed
+
+  (defun custom-goto-recent-directory ()
+    "Open recent directory with dired"
+    (interactive)
+    (unless recentf-mode (recentf-mode 1))
+    (let ((collection
+           (delete-dups
+            (append (mapcar 'file-name-directory recentf-list)))))
+      (ivy-read "directories:" collection :action 'dired)))
+#+END_SRC
+
+但是后来使用中发现了几个问题，在这里附上解决方案：
+1. dired访问的路径并不会被添加到最近访问里
+    #+BEGIN_SRC emacs-lisp
+    (defun recentd-track-opened-file ()
+        "Insert the name of the directory just opened into the recent list."
+        (and (derived-mode-p 'dired-mode) default-directory
+            (recentf-add-file default-directory))
+        ;; Must return nil because it is run from `write-file-functions'.
+        nil)
+
+    (defun recentd-track-closed-file ()
+        "Update the recent list when a dired buffer is killed.
+    That is, remove a non kept dired from the recent list."
+        (and (derived-mode-p 'dired-mode) default-directory
+            (recentf-remove-if-non-kept default-directory)))
+
+    (add-hook 'dired-after-readin-hook 'recentd-track-opened-file)
+    (add-hook 'kill-buffer-hook 'recentd-track-closed-file)
+    #+END_SRC
+2. 使用org-publish发布静态博客时，生成的html路径会把recentf-list塞满
+   #+BEGIN_SRC emacs-lisp
+    (defsubst file-was-visible-p (file)
+        "Return non-nil if FILE's buffer exists and has been displayed."
+        (let ((buf (find-buffer-visiting file)))
+        (if buf
+            (let ((display-count (buffer-local-value 'buffer-display-count buf)))
+                (if (> display-count 0) display-count nil)))))
+
+    (let ((r-list recentf-list))
+        (defsubst keep-default-old-and-visible-recentf-p (file)
+        "Decide whether to keep file in recentf-list.
+        Return non-nil if recentf would, by default, keep FILE, and
+        either FILE name was loaded from recentf file on disk or FILE
+        has been displayed in this session."
+        (if (recentf-keep-default-predicate file)
+            (or (member file r-list)
+                (file-was-visible-p file)))))
+
+    (setf recentf-keep '(keep-default-old-and-visible-recentf-p))
+   #+END_SRC
+3. TRAMP访问时路径不会出现在recentf-list里
+    #+BEGIN_SRC emacs-lisp
+    (require 'recentf)
+    (setq recentf-auto-cleanup 'never) ;; disable before we start recentf!
+    (recentf-mode 1)
+    #+END_SRC
+
+我把它绑定到了dr上:
+[[file:../static/20170106-dired-3.gif]]
 
 * 参考
 emacsist: [[http://mp.weixin.qq.com/s/73rHOjCF8Ot1kZdJuU6tgQ][Emacs文件管理神器--dired常用操作说明]]
