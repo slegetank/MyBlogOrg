@@ -88,10 +88,8 @@ bc - checkout new branch
 * git log
 在status页面按ll就进入了log页面，大概相当于
 #+BEGIN_SRC sh
-  git log --pretty=format:"%h * %s %an %ar"
+  git log --format="%h * %s %an %ar"
 #+END_SRC
-可以看到对比图：
-[[file:../static/20170206-magit-6.png]]
 
 在每个提交上，按回车就可以查看这个提交的详细信息，大概相当于
 #+BEGIN_SRC sh
@@ -101,6 +99,32 @@ git show xxx --pretty=fuller
 1-4对于这个页面也同样有效。
 
 ** 操作
+*** log
+git log相对于git status功能上需要更多的对于查询的侧重，而log页面也有丰富的参数可供使用：
+[[file:../static/20170206-magit-7.png]]
+从"~/.emacs.d/elpa/magit-20170203.1633/magit-log.el"中可以看到每个选项对应的实际命令行参数：
+#+BEGIN_SRC emacs-lisp
+  :switches ((?g "Show graph"              "--graph")
+             (?c "Show graph in color"     "--color")
+             (?d "Show refnames"           "--decorate")
+             (?S "Show signatures"         "--show-signature")
+             (?u "Show diffs"              "--patch")
+             (?s "Show diffstats"          "--stat")
+             (?h "Show header"             "++header")
+             (?D "Simplify by decoration"  "--simplify-by-decoration")
+             (?f "Follow renames when showing single-file log" "--follow"))
+  :options  ((?n "Limit number of commits" "-n")
+             (?f "Limit to files"          "-- " magit-read-files)
+             (?a "Limit to author"         "--author=")
+             (?o "Order commits by"        "++order=" magit-log-select-order)
+             (?g "Search messages"         "--grep=")
+             (?G "Search changes"          "-G")
+             (?S "Search occurrences"      "-S")
+             (?L "Trace line evolution"    "-L" magit-read-file-trace))
+#+END_SRC
+
+只要按-g或者=n等，就可以设置、取消这些参数了。对于查询某个文件的历史、某个提交者的历史来说都非常方便。
+
 *** rebase interactive
 即git rebase -i，magit里变得稍微方便了一点:
 [[file:../static/20170206-magit-6.gif]]
