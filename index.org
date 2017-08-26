@@ -2,24 +2,74 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20170826-emacsChart.org][Emacs图表优雅的解决方案]]
+:PROPERTIES:
+:RSS_PERMALINK: blog/20170826-emacsChart.html
+:PUBDATE:  <2017-08-26 10:56>
+:END:
+<2017-08-26 10:56> | emacs
+
+
+程序员工作中经常需要画图表，例如流程图、类图等。而作为生产力工具的Emacs自然也提供了(或者说不甘寂寞的程序员为其提供了)相应的解决方案。
+这里介绍一种artist mode + ditaa的方案，相当优雅而高效。
+方案来自于这里： [[https://www.youtube.com/watch?v=cIuX87Xo8Fc][Poor Man's UML / Emacs Artist Mode and Ditaa Demo]] 大光头讲的比我好，这里只是整理一下安装流程。
+
+[[file:blog/20170826-emacsChart.org][Read More...]]
+-----
+* [[file:blog/20170318-tramp.org][TRAMP学习记录]]
+:PROPERTIES:
+:RSS_PERMALINK: blog/20170318-tramp.html
+:PUBDATE:  <2017-03-18 16:57>
+:END:
+<2017-03-18 16:57> | Emacs
+
+
+TRAMP是emacs远程编辑的神器，在此记录，以便以后查阅。
+
+[[file:blog/20170318-tramp.org][Read More...]]
+-----
+* [[file:blog/20170206-magit.org][Magit - MagicGitTool for Emacs]]
+:PROPERTIES:
+:RSS_PERMALINK: blog/20170206-magit.html
+:PUBDATE:  <2017-02-06 16:01>
+:END:
+<2017-02-06 16:01> | Emacs
+
+
+作为emacs里git代码管理的杀手级插件，其强大毋庸置疑。
+
+[[file:blog/20170206-magit.org][Read More...]]
+-----
 * [[file:blog/20170108-blogWithEmacs.org][Blog With Emacs]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20170108-blogWithEmacs.html
-:PUBDATE:  2017-01-08
+:PUBDATE:  <2017-01-08 15:16>
 :END:
-2017-01-08 | Emacs
+<2017-01-08 15:16> | Emacs
 
 
-本文讲讨论如何用emacs优雅的写博客。
+本文讨论如何优雅的用emacs写博客。
 
 [[file:blog/20170108-blogWithEmacs.org][Read More...]]
+-----
+* [[file:blog/20170106-dired.org][如何优雅的使用Dired]]
+:PROPERTIES:
+:RSS_PERMALINK: blog/20170106-dired.html
+:PUBDATE:  <2017-03-23 14:50>
+:END:
+<2017-03-23 14:50> | Emacs
+
+
+Dired作为emacs的目录管理工具，必学。
+
+[[file:blog/20170106-dired.org][Read More...]]
 -----
 * [[file:blog/20161120-AmericaPoliticalCutlture.org][权力是靠不住的 - 美国政治文化探析 读后总结]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20161120-AmericaPoliticalCutlture.html
-:PUBDATE:  2016-11-20
+:PUBDATE:  <2016-11-20 17:05>
 :END:
-2016-11-20 | Book
+<2016-11-20 17:05> | Book
 
 迁移。
 [[file:blog/20161120-AmericaPoliticalCutlture.org][Read More...]]
@@ -27,9 +77,9 @@
 * [[file:blog/20161112-chinafoundworld.org][从海图中所读到的历史--《1421年中国发现世界》读后总结]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20161112-chinafoundworld.html
-:PUBDATE:  2016-11-12
+:PUBDATE:  <2016-11-12 16:05>
 :END:
-2016-11-12 | Book
+<2016-11-12 16:05> | Book
 
 
 迁移。
@@ -39,9 +89,9 @@
 * [[file:blog/20160925-emacstips.org][翻译：Lisp Style Tips for the Beginner - Heinrich Taube]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160925-emacstips.html
-:PUBDATE:  2016-09-25
+:PUBDATE:  <2016-09-25 12:19>
 :END:
-2016-09-25 | Emacs
+<2016-09-25 12:19> | Emacs
 
 
 迁移。翻译。
@@ -51,9 +101,9 @@
 * [[file:blog/20160825-iOSSign.org][iOS代码签名理解]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160825-iOSSign.html
-:PUBDATE:  2016-08-25
+:PUBDATE:  <2016-08-25 21:38>
 :END:
-2016-08-25 | iOS
+<2016-08-25 21:38> | iOS
 
 
 迁移。尝试用openssl解释苹果的签名行为。
@@ -63,9 +113,9 @@
 * [[file:blog/20160815-UPnPInspector.org][Mac下安装UPnP Inspector]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160815-UPnPInspector.html
-:PUBDATE:  2016-08-15
+:PUBDATE:  <2016-08-15 16:12>
 :END:
-2016-08-15 | Helper
+<2016-08-15 16:12> | Helper
 
 
 迁移。
@@ -75,9 +125,9 @@
 * [[file:blog/20160721-block.org][Objective-C Block]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160721-block.html
-:PUBDATE:  2016-07-21
+:PUBDATE:  <2016-07-21 14:52>
 :END:
-2016-07-21 | iOS
+<2016-07-21 14:52> | iOS
 
 
 迁移。
@@ -87,9 +137,9 @@
 * [[file:blog/20160716-WutheringHeights.org][输了你，赢了世界又如何 -- 呼啸山庄读后感]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160716-WutheringHeights.html
-:PUBDATE:  2016-07-16
+:PUBDATE:  <2016-07-16 17:32>
 :END:
-2016-07-16 | Book
+<2016-07-16 17:32> | Book
 
 
 迁移。
@@ -99,9 +149,9 @@
 * [[file:blog/20160312-CrimeandPunishment.org][当已无路可走 - 罪与罚读后总结]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160312-CrimeandPunishment.html
-:PUBDATE:  2016-03-12
+:PUBDATE:  <2016-03-12 15:15>
 :END:
-2016-03-12 | Book
+<2016-03-12 15:15> | Book
 
 
 迁移。
@@ -111,9 +161,9 @@
 * [[file:blog/20160216-Shakespeare.org][反映人生，揭示善恶 - 莎士比亚四大悲剧读后总结]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20160216-Shakespeare.html
-:PUBDATE:  2016-02-16
+:PUBDATE:  <2016-02-16 14:00>
 :END:
-2016-02-16 | Book
+<2016-02-16 14:00> | Book
 
 
 迁移。
@@ -123,9 +173,9 @@
 * [[file:blog/20151225-environment.org][工作环境配置记录]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20151225-environment.html
-:PUBDATE:  2015-12-25
+:PUBDATE:  <2015-12-25 10:49>
 :END:
-2015-12-25 | Helper
+<2015-12-25 10:49> | Helper
 
 
 2016-09-03 16:00:04 更新：
@@ -137,9 +187,9 @@
 * [[file:blog/20151122-AdventuresOfHuckleberryFinn.org][我就下地狱吧 -- 哈克贝利费恩历险记读后总结]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20151122-AdventuresOfHuckleberryFinn.html
-:PUBDATE:  2015-11-22
+:PUBDATE:  <2015-11-22 01:07>
 :END:
-2015-11-22 | Book
+<2015-11-22 01:07> | Book
 
 
 迁移。
@@ -149,9 +199,9 @@
 * [[file:blog/20130705-selfview.org][立场决定观点 --关于政治历史事件的个人立场]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130705-selfview.html
-:PUBDATE:  2013-07-05
+:PUBDATE:  <2013-07-05 08:43>
 :END:
-2013-07-05 | History & Politics
+<2013-07-05 08:43> | History & Politics
 
 
 迁移。这是我对于文史哲的基本世界观，简单的说就是“屁股决定脑袋”。
@@ -161,9 +211,9 @@
 * [[file:blog/20130420-unittest.org][iOS开发之单元测试]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130420-unittest.html
-:PUBDATE:  2013-04-20
+:PUBDATE:  <2013-04-20 18:21>
 :END:
-2013-04-20 | iOS
+<2013-04-20 18:21> | iOS
 
 
 迁移。惭愧，这个一直没能实践。
@@ -173,9 +223,9 @@
 * [[file:blog/20130407-staticLibrary.org][iOS开发之静态链接库]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130407-staticLibrary.html
-:PUBDATE:  2013-04-07
+:PUBDATE:  <2013-04-07 19:23>
 :END:
-2013-04-07 | iOS
+<2013-04-07 19:23> | iOS
 
 迁移
 [[file:blog/20130407-staticLibrary.org][Read More...]]
@@ -183,9 +233,9 @@
 * [[file:blog/20130403-Agile.org][开发人员修养--敏捷]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130403-Agile.html
-:PUBDATE:  2013-04-03
+:PUBDATE:  <2013-04-03 16:56>
 :END:
-2013-04-03 | Software Engineering
+<2013-04-03 16:56> | Software Engineering
 
 
 迁移。敏捷追求高效，手段反而是其次，重要的是思想。
@@ -195,9 +245,9 @@
 * [[file:blog/20130401-MVC.org][iOS开发基础之MVC模式]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130401-MVC.html
-:PUBDATE:  2013-04-01
+:PUBDATE:  <2013-04-01 17:31>
 :END:
-2013-04-01 | iOS
+<2013-04-01 17:31> | iOS
 
 
 迁移。App程序员的必备知识。
@@ -207,9 +257,9 @@
 * [[file:blog/20130305-bundle.org][iOS插件化开发之bundle]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130305-bundle.html
-:PUBDATE:  2013-03-05
+:PUBDATE:  <2013-03-05 11:32>
 :END:
-2013-03-05 | iOS
+<2013-03-05 11:32> | iOS
 
 博客迁移。
 [[file:blog/20130305-bundle.org][Read More...]]
@@ -217,9 +267,9 @@
 * [[file:blog/20130304-plugin.org][iOS插件化开发概述]]
 :PROPERTIES:
 :RSS_PERMALINK: blog/20130304-plugin.html
-:PUBDATE:  2013-03-04
+:PUBDATE:  <2013-03-04 15:44>
 :END:
-2013-03-04 | iOS
+<2013-03-04 15:44> | iOS
 
 博客迁移。
 Bundle的应用，虽然这玩意到现在还是没有什么实用价值。
