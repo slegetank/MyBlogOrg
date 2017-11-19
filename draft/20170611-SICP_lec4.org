@@ -1,0 +1,15 @@
+#+TITLE: SICP笔记 - 4
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-06-11 18:48>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Software Engineering
+
+#+BEGIN_COMMENT PREVIEW
+
+video:
+http://v.youku.com/v_show/id_XMTM4NTY5NzE3Ng==.html
+
+#+END_COMMENT
+
+* Lec4a

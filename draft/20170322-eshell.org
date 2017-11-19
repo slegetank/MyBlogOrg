@@ -1,0 +1,18 @@
+#+TITLE: eshell学习记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-03-22 16:51>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+eshell是elisp实现的shell mode，也是一个不错的shell操作环境。
+
+#+END_COMMENT
+
+https://www.masteringemacs.org/article/running-shells-in-emacs-overview
+
+https://www.masteringemacs.org/article/complete-guide-mastering-eshell
+
+https://www.reddit.com/r/emacs/comments/1zkj2d/advanced_usage_of_eshell/

@@ -1,0 +1,166 @@
+#+TITLE: React Native 学习记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-04-09 13:12>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: react
+
+#+BEGIN_COMMENT PREVIEW
+
+FB的跨平台方案。
+
+#+END_COMMENT
+
+* 环境配置
+** Node.js
+https://nodejs.org/en/
+
+我一直苦恼如何方便的学习js，因为每次都在网页里写一段js再刷新页面看结果实在太烦了。而Node帮我解决了这一问题，实在是功德无量。交互式的编写方式跟Python很像，用起来很舒心。而且它提供的包管理器npm类似于Python的pip和ruby的gem等同，非常方便--实际上，即使不用Node，npm也是开发js必备的工具。
+
+交互式环境，跟Python一模一样，很方便、很贴心：
+[[file:../static/20170409-react-native-0.gif]]
+
+执行脚本文件，也跟Python一模一样，只要编写js代码文件，例如保存为test.js，则
+#+BEGIN_SRC sh
+  node test.js
+#+END_SRC
+
+就可以运行了。这么到位的环境，我简直不能找到一个理由不学js了~
+
+Github: https://github.com/facebook/react-native
+官方文档：https://facebook.github.io/react-native/
+https://facebook.github.io/react-native/docs/tutorial.html
+emacs:
+http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
+
+** eslint -  语法动态检查
+eslint是一个比较新的js代码语法检测工具，这里我们用它作为语法检测的后端。
+
+#+BEGIN_SRC sh
+  sudo npm install -g eslint babel-eslint eslint-plugin-react
+#+END_SRC
+安装用于语法检查的eslint（以及bebal和react的扩展）。然后在你想要进行语法检测的目录下新建文件.eslintrc.json，并粘贴如下代码(来自这里：http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html)：
+#+BEGIN_SRC js
+    {
+        "extends": "eslint:recommended",
+        "parser": "babel-eslint",
+        "plugins": [ "react" ],
+        "env": {
+            "browser": true,
+            "es6": true,
+            "node": true
+        },
+        "ecmaFeatures": {
+            "arrowFunctions": true,
+            "blockBindings": true,
+            "classes": true,
+            "defaultParams": true,
+            "destructuring": true,
+            "forOf": true,
+            "generators": true,
+            "modules": true,
+            "spread": true,
+            "templateStrings": true,
+            "jsx": true
+        },
+        "rules": {
+            "consistent-return": [0],
+            "key-spacing": [0],
+            "quotes": [0],
+            "new-cap": [0],
+            "no-multi-spaces": [0],
+            "no-shadow": [0],
+            "no-unused-vars": [1],
+            "no-use-before-define": [2, "nofunc"],
+            "react/jsx-no-undef": 1,
+            "react/jsx-uses-react": 1,
+            "react/jsx-uses-vars": 1
+        }
+    }
+#+END_SRC
+
+然后新建一个test.js，输入几行代码：
+#+BEGIN_SRC js
+  var a = 2;
+  b = 3;
+#+END_SRC
+
+保存，然后在命令行输入:
+#+BEGIN_SRC sh
+  eslint test.js
+#+END_SRC
+
+如果配置正确的话，应该有如下输出：
+
+#+BEGIN_SRC sh
+  /Users/hy/Desktop/testjs2/test.js
+  1:5  warning  'a' is assigned a value but never used  no-unused-vars
+  2:1  error    'b' is not defined                      no-undef
+
+  ✖ 2 problems (1 error, 1 warning)
+#+END_SRC
+
+*** 问题
++ early use
+    http://eslint.org/docs/rules/no-use-before-define
+    http://stackoverflow.com/questions/37144786/es6-early-use-of-classes/37145465
++ color literal
+    https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-color-literals.md
+
+** tern - 自动补全
+tern是一个JS的语法分析接口工具，用来帮助连接后端语法分析工具以及前端编辑器。
+#+BEGIN_SRC sh
+  sudo npm -g install tern
+#+END_SRC
+并且安装插件：
+#+BEGIN_SRC sh
+  sudo npm -g install tern-jsx
+#+END_SRC
+
+然后在工程下新建配置文件.tern-project, 添加以下代码：
+#+BEGIN_SRC js
+  {
+      "libs": [
+          "browser",
+          "jquery"
+      ],
+      "plugins": {
+          "jsx": {}
+      }
+  }
+#+END_SRC
+
+** Firefox
+fb为react开发提供了浏览器插件([[https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html][doc]])，这里我们选择Firefox。
+打开 https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ ，下载并安装。这时打开Firefox的工具箱(option+command+i)就会看到多了一个"React"选项卡。
+*** 改变Firefox从外部调起时的行为方式
+由于我们后面希望调用"open -a Firefox ..."的时候能刷新页面而不是打开一个新的tab，所以我们需要改变Firefox的默认方式。([[https://www.ghacks.net/2009/07/03/force-firefox-to-open-links-in-same-tab/][doc]])
+1 在地址栏输入about:config
+2 搜索browser.link.open_newwindow.override.external，默认值为-1，将值改为1 。
+** emacs
+* react 路线图
+** JavaScript
+JavaScript在最初设计出来的时候名为LiveScript，但是后来为了顺便搭当时大火的Java的顺风车，因而被重命名为JavaScript，其实它与Java的并没有太大关系。就像其他后来语言一样，它在语法上是类C的，但是其内在更接近于Lisp，这点和python很像。这篇js的教程写的很好，如果觉得必要的话可以复习一下：https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript 。
+
+除了基本的js语法之外，还需要知道有一个组织，被称为ECMA（European Computer Manufactures Association，欧洲计算机制造联合会），它的性质类似于ISO。在JavaScript设计完成后提交到了该组织进行了标准化，之后每隔几年新的标准就会推出；而在2015年发布了最新版本的ECMAScript 6标准，而这在RN中也进行了支持。大概的ES6常用语法看这篇文章：http://www.jianshu.com/p/ebfeb687eb70 。
+
+这里顺便写一下对几种我的常用语言的想法。目前我所接触过的语言有C、Objective-C、Python、JavaScript、ELisp，这五种语言都有广泛的用户。其中，C、OC为编译型语言，Python、JS、ELisp为脚本语言；OC是C的后辈，而Python、JS为Lisp的后辈。近年来凡是流行的语言，基本都是基于这样一个原则，即语法类C，而语言的思想则来源于Lisp。这一方面能看出C在程序员中的影响力，另一反面也能看到Lisp这门语言思想上的优美。而在这五门语言中，只要linux还是C写的，这门语言就永远不会消亡；OC作为苹果公司的app开发语言，现在正在被同为官方推出的Swift所替代（大公司推出的第一门语言在语法上一般是类C的，过几年会推出自己的语言，比如Swift和C#）；JavaScript在Web前端的地位是任何其他语言所不能替代的，而Node的出现则大大的使其应用场景更为广泛；ELisp作为Lisp的一门方言，应用场景仅局限于emacs编辑器，但作为“神的编辑器”的魔法符文专用文字，估计也会一直存在下去吧。这里唯一的特例是Python，这门语言最大的特色就是其缩进也是语法规则一部分了吧，而从上面的对比也能看出这门语言的设计是极其优秀的，即使没有什么必要性，大家还是坚持在用它。
+
+** react
+开始:
+#+BEGIN_SRC sh
+  npm install -g create-react-app
+  create-react-app my-app
+
+  cd my-app
+  npm start
+#+END_SRC
+
+https://facebook.github.io/react/tutorial/tutorial.html
+http://www.ruanyifeng.com/blog/2015/03/react.html
+https://blog.yld.io/2015/06/10/getting-started-with-react-and-node-js/#.WOnqaVLtaHo
+** react-native
+第三方库列表：https://github.com/jondot/awesome-react-native
+第三方库：
+NavigationBar: npm install --save react-navigation
+https://reactnavigation.org/docs/intro/

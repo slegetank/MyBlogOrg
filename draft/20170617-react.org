@@ -1,0 +1,50 @@
+#+TITLE: React学习笔记
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-06-17 13:54>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: react
+
+#+BEGIN_COMMENT PREVIEW
+
+前端框架，但不止是前端框架。
+
+#+END_COMMENT
+
+React提出了以下不同于之前前端开发的概念与行为：
+1 采用JSX编写虚拟DOM。虚拟DOM使得跨平台变得可行，并且相对于直接操作DOM提高了效率（也就是双缓冲的方式，计算出实际需要更新的结构，最小化更新）。教程上说JSX不是必须的，因为它其实就是语法糖。但实际上其直观的表述方式根本不可能被直接写JS语句取代；而建立在React之上的各种UI库如果不用JSX，估计代码最后就没法看了。
+2 内联的样式。不鼓励使用单独的CSS文件来进行样式描述，而是将相关组件跟其对应的style写在一起。
+3 组件化
+
+* 结构
+** UI
+react-router 路由，处理页面之间的关系
+rflexbox 布局，使用flexbox进行页面布局
+material-ui 更方便的控件定制
+动画
+https://medium.freecodecamp.com/how-to-build-animated-microinteractions-in-react-aab1cb9fe7c8
+** data
+Redux
+
+* 基础
+** JavaScript
+ES6之后，JavaScript与之前的语法有了很大不同，变得更加modern，写起来也更顺手了。阮一峰的教程不错：http://es6.ruanyifeng.com
+
+** JSX
+jsx实际上是react的一种语法糖；它以类似xml的语法，提供了更直观的UI代码展现方式。跟它相比，我觉得苹果的以xib这种黑箱文件格式来操作UI的方式就像一坨屎。
+
+
+* Redux
+* material-ui
+http://www.material-ui.com/#/
+
+
+* rflexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flexbox教程
+https://github.com/jxnblk/reflexbox 简要文档
+http://jxnblk.com/reflexbox/ demo
+
+* react router
+https://github.com/ReactTraining/react-router/tree/master/packages/react-router/docs/api
+
+* webpack

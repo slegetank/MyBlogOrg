@@ -1,0 +1,42 @@
+#+TITLE: org mode导出pdf
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-08-18 13:40>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+使用org mode 导出pdf
+
+#+END_COMMENT
+
+最近需要用到org mode导出pdf，但是却发现在mac上无法导出，会报错：
+#+BEGIN_SRC emacs-lisp
+  zsh:1: command not found: pdflatex
+#+END_SRC
+
+因此，需要先下载latex的依赖包：
+http://www.tug.org/mactex/morepackages.html
+
+下载BasicTex。完整的MacTex要3个G，太大了。
+
+下载完成后，在shell的配置文件里加入：
+#+BEGIN_SRC shell
+  export PATH="$PATH:/Library/TeX/texbin"
+#+END_SRC
+
+再导出依然会报错：
+#+BEGIN_SRC emacs-lisp
+  ! LaTeX Error: File `wrapfig.sty' not found.
+#+END_SRC
+
+此时需要进行安装：
+#+BEGIN_SRC shell
+  sudo tlmgr update --self
+  sudo tlmgr install wrapfig
+  udo tlmgr install capt-of
+#+END_SRC
+
+终于导出成功。
+

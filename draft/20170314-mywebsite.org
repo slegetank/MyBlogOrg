@@ -1,0 +1,77 @@
+#+TITLE: 网站搭建记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-03-14 12:14>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+记录网站搭建当中的问题，方便以后查询。
+
+#+END_COMMENT
+
+* 结构
+服务器系统为Debian GNU/Linux 8.7 (lsb_release -a)。
++ Server side
+    Server: Apache + mod_wsgi
+    Front-end: Pure + JQuery + Jinja
+    Back-end: Flask + MySQL
++ Client side:
+    Emacs
+
+* Apache & mod_wsgi
+** vhosts配置
+在/etc/apache2/sites-available下新建"mywebsite.conf"，添加以下结构：
+#+BEGIN_SRC xml
+  <VirtualHost *:80>
+  ServerName slegetank.com
+  ServerAlias www.slegetank.com
+  DocumentRoot /var/www/mywebsite/MyWebSite
+  WSGIScriptAlias / /var/www/mywebsite/mywebsite.wsgi
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  LogLevel warn
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+  <VirtualHost *:80>
+  ServerName blog.slegetank.com
+  DocumentRoot /var/www/mywebsite/MyWebSite
+  WSGIScriptAlias / /var/www/mywebsite/mywebsite.wsgi
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  LogLevel warn
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+#+END_SRC
+其中：
++ ServerName 要与Flask中的定义相匹配
++ ServerAlias 可以用通配符，匹配的项会指向ServerName
++ DocumentRoot 指向网站根目录
++ WSGIScriptAlias 指向wsgi配置文件
+
+编辑完成，保存。执行命令：
+#+BEGIN_SRC shell
+  sudo a2ensite mywebsite.conf
+#+END_SRC
+
+来使vhost生效。最后，重启server：
+#+BEGIN_SRC shell
+  /etc/init.d/apache2 restart
+#+END_SRC
+** mod_wsgi
+编辑"/var/www/mywebsite/mywebsite.wsgi"，
+#+BEGIN_SRC python
+  #!/usr/bin/python
+
+  activate_this = '/var/www/mywebsite/MyWebSite/venv/bin/activate_this.py'
+  execfile(activate_this, dict(__file__=activate_this))
+
+  import sys
+  import logging
+  logging.basicConfig(stream=sys.stderr)
+  sys.path.insert(0,"/var/www/mywebsite/MyWebSite")
+
+  from manage import app as application
+#+END_SRC
+
+这一段会将网站的路径加入环境变量，并且会调起virtualenv。
+

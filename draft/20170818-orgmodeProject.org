@@ -1,0 +1,103 @@
+#+TITLE: org mode项目管理
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-08-18 17:23>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+近期需要加强公司项目的管理，因此需要对org mode进行更多的学习。
+
+#+END_COMMENT
+
+所有快捷键依然以evil mode下为准。
+
+* 快捷键
+在安装了[[https://github.com/Somelauw/evil-org-mode][evil-org-mode]] 插件之后，快捷键如下：
+| key         | function                     |
+|-------------+------------------------------|
+| S-l S-h t   | 切换state                    |
+| S-j S-k     | 切换优先级 微调时间戳        |
+| m-l m-h     | 标题提高、下降等级(表列调整) |
+| m-j m-k     | 标题上、下移动(表行调整)     |
+| gh gj gk gl | 标题间移动                   |
+| vae         | 选中元素                     |
+| ()          | 表cell间移动                 |
+| T           | 新建todo                     |
+| C-c Enter   | 建表                         |
+| C-c C-t     | 通过快捷键切换state          |
+
+* timestamp
+org mode支持强大的时间戳插入功能
+| key     | function                     |
+|---------+------------------------------|
+| C-c C-s | TODO schedule                |
+| C-c C-d | TODO deadline                |
+| C-c .   | Insert timestamp with prompt |
+| C-c <   | Insert current timestamp     |
+| C-c >   | Goto calender                |
+| C-c C-o | Goto agenda                  |
+| S-j/S-h | Previous day                 |
+| S-k/S-l | Next day                     |
+
+其中，"C-c ." "C-c C-s" "C-c C-d"三个快捷键会弹出提示，emacs会尝试猜测你的输入以生成新的日期。其大致规则如下(这里只列出常用的，具体查看文档：[[http://orgmode.org/manual/The-date_002ftime-prompt.html]])：
++ 默认猜测日期为未来的一个日期。例如今天是2017-08-22，如果我输入23，则会变成2017-08-23；如果输入1，则会变成2017-09-01，因为8月份的1号已经过去了。
++ 日期格式会辨认月以及星期的缩写。例如fri会自动改变为下一个星期五的日期。
++ 更改日期对应的格式为x-y-z a:b，分别对应年月日时分。
++ +/-对应的为相对于当前时间戳，如果相对于当前时间则用++/--。.对应为今天。-fri为上个星期五的日期。
++ 相对时间缩写分别为hdwmy，即小时、天、星期、月、年。例如+4m为4个月后的时间。
+
+除了这些输入，你仍然可以使用下方的日历来标明日期。但我觉得实际上并不如直接输入好用。
+
+* Tag
+每个任务项都可以具有tag。tag可以用来标记任务属性，用来提供更方便的搜索以及使用agenda view。如果全局修改，可以修改org-tag-alist；
+
+而对于单个文件，则可以在头部加入(要更新当前文件的配置，需要在头域里按C-c C-c):
+#+BEGIN_SRC emacs-lisp
+  #+TAGS: @work(w) @home(h) @tennisclub(t)
+#+END_SRC
+
+括号里的为快捷键。当要添加tag时，可以在body里按C-c C-q，或者在header上按C-c C-c，此时，mini-buffer里会提示之前定义的tag；按快捷键则会自动添加。快捷键：
+| key   | function    |
+|-------+-------------|
+| space | 清除所有tag |
+| enter | 确认        |
+| C-g   | 取消        |
+
+* table
+org mode提供了强大的文本table操作，令我叹为观止。
+| key       | function                            |
+|-----------+-------------------------------------|
+| C-c {I}   | init a x b table                    |
+| C-c C-c   | 重新排布table                       |
+| C-c `     | 在单独window编辑cell                |
+| C-c ^     | 排序                                |
+| C-c +     | 元素结果累加，结果保存在kill-ring里 |
+| C-c -     | 添加横线                            |
+| C-c Space | 清空当前cell                        |
+| S-Ret     | 复制上一行的field                   |
+| o         | 新建一行                            |
+
+field中对齐使用<l> <c> <r>来指定。导出table时，默认是没有竖线的，此时单起一行，第一个元素为"/"，竖线包括的组用"<" ">"来表示。所以，一个表格可能是这样的：
+| a   | b   | c   | d   |
+|-----+-----+-----+-----|
+| /   | <   |     | >   |
+| <c> | <c> | <c> | <c> |
+| 1   | 2   | 3   | 4   |
+
+* 超链接
+| key     | function |
+|---------+----------|
+| C-c C-l | edit     |
+| C-c C-o | open     |
+#+BEGIN_SRC org
+ [[link][description]]
+#+END_SRC
+
+* 未完成
+org-columns
+org-capture
+sparse trees
+Agenda views
+org archive

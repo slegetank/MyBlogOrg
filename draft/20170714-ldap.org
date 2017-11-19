@@ -1,0 +1,17 @@
+#+TITLE: flask & ldap
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-07-14 17:02>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: web
+
+#+BEGIN_COMMENT PREVIEW
+
+#+END_COMMENT
+
+依赖库：
+#+BEGIN_SRC sh
+pip install python-ldap \
+   --global-option=build_ext \
+   --global-option="-I$(xcrun --show-sdk-path)/usr/include/sasl"
+#+END_SRC

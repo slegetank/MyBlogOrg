@@ -1,0 +1,29 @@
+#+TITLE: BLE基础知识学习
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-10-14 11:55>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Computer Knowledge
+
+#+BEGIN_COMMENT PREVIEW
+
+最近工作中需要通过BLE协议与蓝牙模块进行交互，特此学习整理。
+
+#+END_COMMENT
+
+* 概述
+蓝牙4.0标准引入了BLE协议，即Bluetooth Low Energy，用来提供低能耗的通讯。
+* Controller Layer
+** Physical Layer
+工作在2.4GHz ISM频段(2.4GHz为各国共同的ISM频段。因此Wi-Fi，蓝牙等无线网络，均可工作在2.4GHz频段上。)，分为40个信道，每个信道2MHz，即2.4-2.4835GHz。而802.11 2.4GHz频段为2.412-2.484Hz，所以BLE在设计时就需要考虑与Wi-Fi信号的共存。
+40个信道中，37、38、39是advertising channel，用来进行设备发现与建立连接，以达到最优的发现、连接速度。而在设计时，也考虑到了Wi-Fi信号的干扰，这三个信道实际上并不是顺序排到最后，而是最小化了与Wi-Fi信号的冲突，如图所示：
+[[file:../static/20171014-BLE-0.png]]
+
+BLE Center会监听这三个信道上peripheral的advertise。advertise动作在三个信道上轮流发送，时间间隔如下图所示：
+[[file:../static/20171014-BLE-1.png]]
+
+也就是说可能的时间间隔为20ms-10.24s+10ms。advRandom可以帮助减少不同设备在三个信道上的冲突。
+
+** Link Layer
+LL Advertising PDU 最大31bytes。
+AD size = 39 - 2 - 6 = 31 bytes

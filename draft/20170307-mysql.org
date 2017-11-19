@@ -1,0 +1,37 @@
+#+TITLE: MySQL Notes
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-03-07 17:34>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Note
+
+#+BEGIN_COMMENT PREVIEW
+
+配置网站时，对于数据库操作的一些记录，以便以后查询。
+
+#+END_COMMENT
+
+Debian:
+apt-get install mysql-server mysql-client
+http://linux.it.net.cn/e/data/mysql/2016/0102/19361.html
+
+开放远程访问权限：
+https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
+
+Mac:
+ImportError: No module named MySQLdb
+brew install mysql-connector-c
+pip install MySQL-python
+
+允许指定用户访问数据库：
+#+BEGIN_SRC sql
+  GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' 
+  IDENTIFIED BY 'YOUR_PASS' 
+  WITH GRANT OPTION;
+  FLUSH PRIVILEGES;  
+#+END_SRC
+*.* = DB.TABLE，可以用其限制指定用户只能访问指定库。
+'root'@'%' root用来限定用户，%指代所有IP，用来限制IP，例如%.168.1.1。
+
+utf8
+https://www.linuxzen.com/sqlalchemy-mysqlshu-ju-ku-luan-ma-jie-jue.html

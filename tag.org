@@ -6,6 +6,7 @@
 ** [[file:blog/20170826-emacsChart.org][<2017-08-26 10:56> Emacs图表优雅的解决方案]]
 
 * Emacs
+** [[file:blog/20170328-mu4e.org][<2017-03-28 17:52> Mail with Emacs]]
 ** [[file:blog/20170318-tramp.org][<2017-03-18 16:57> TRAMP学习记录]]
 ** [[file:blog/20170206-magit.org][<2017-02-06 16:01> Magit - MagicGitTool for Emacs]]
 ** [[file:blog/20170108-blogWithEmacs.org][<2017-01-08 15:16> Blog With Emacs]]

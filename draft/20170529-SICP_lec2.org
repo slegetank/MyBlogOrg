@@ -1,0 +1,89 @@
+#+TITLE: SICP笔记 - 2 高阶过程
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-05-29 15:20>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Software Engineering
+
+#+BEGIN_COMMENT PREVIEW
+
+video:
+http://v.youku.com/v_show/id_XNzAzNjI1NjU2.html
+http://v.youku.com/v_show/id_XNzAzNjg4Mjk2.html
+
+#+END_COMMENT
+
+* 高阶过程
+高阶过程即以过程作为参数进行运算，并且返回过程的过程。
+
+假如计算a-b之间的数的和，或者a-b之间的数的平方的和，或者a-b之间的数的1/2或者其他操作的和，此时就可以将累加这个操作抽象出来，将对单个数的操作抽象出来。这样累加函数就能得到重用：
+这里我用elisp写一写，虽然这并不好：scheme整个语言都表达出一个信息，也就是SICP的作者想表达出的信息，即数据、过程是一个东西，并没有什么区别；而elisp仍然严格区分数据和过程；不过懂了就可以了，在emacs里用elisp写还是更方便：
+#+BEGIN_SRC emacs-lisp
+  (defun lec2-1 (a b func)
+    "a for lower bounds
+    b for upper bounds
+    func for function on the invidual item"
+    (if (< b a)
+        0
+      (+ (funcall func a) (lec2-1 (1+ a) b func))))
+
+  (lec2-1 1 10 '(lambda (a) (/ a 2))) ;; 计算每个数的1/2的和
+  (lec2-1 1 10 '(lambda (a) (* a a))) ;; 计算平方和
+#+END_SRC
+
+但这样还是以过程作为参数，而产生数据作为结果，这还不是高阶过程。
+
+"As I said, computers to make people happy, not people to make computers happy. And for the most part, the reason why we introduce all this abstractions stuff is to make so that programs can be more easily written and more easily read."
+
+而更高级的抽象则使用过程作为参数，并且输出过程作为结果，这样过程与数据之间的差别就更模糊了。
+#+BEGIN_SRC emacs-lisp
+  (defun lec2-2 (func)
+    "Higher procedure version
+    func for function on invidual item"
+    (setq lexical-binding t)
+    (lambda (a b)
+      (if (< b a)
+          0
+        (+ (funcall func a) (funcall (lec2-2 func) (1+ a) b)))))
+
+  (funcall (lec2-2 '(lambda (a) (* a a))) 1 10)
+  (funcall (lec2-2 '(lambda (a) (/ a 2))) 1 10)
+#+END_SRC
+可以看到，lec2-2入参为函数，出参也为函数。这个例子看起来与上面的例子并没有什么太大区别，但以我来看至少有两个好处：
+1 使整个逻辑更加清晰，因为我们使用一个过程制造了另一个更特殊化的过程，然后用这个过程对参数进行了调用。
+2 提高了复用；具体可以参照各种语言中的map方法。
+
+* 复合数据
+复合数据的核心思想依然是建立层次化的系统，以隔绝层之间的细节。复合数据可以将简单的数据组合，抽象出现实中需要解决的问题。例如可以组合出people这种复合数据，以提高抽象的层次，从而隔绝自己需要解决问题的层与下层之间的细节。这其实就是面向对象语言中的class，或者c中的struct结构。这一层面的思想根据面向对象思想来理解就好了。
+
+"Because the whole name of this game is that we'd like the programming language to express the concepts that we have in our minds."
+
+这种将数据的使用与实现分离开的方法被称为数据抽象，通过构造函数和选择函数将数据对象与其表示分离开的编程方法。数据抽象可以推迟对于实现细节的判断，这样系统设计就可以先完成（因为在系统设计之初很多情况都是预想不到的），而到必要的时候才对其细节进行实现。
+
+"I said that computer science is a lot like magic, and it's sort of good that it's like magic. There's a bad part of computer science that's a lot like religion. And in general, I think people who really believe that you design everything before you implement it basically are people who haven't designed very many things. The real power is that you can pretend you've made the decision and then later on figure out which one is right, which decision you ought to have made. And when you can do that, you have the best of both worlds."
+
+下面这个例子仍然表达了数据抽象的作用，即上层并不关心下层如何实现，只要明确需求就可以；同时也体现出了在Lisp中过程和数据并没有什么区别。
+数据抽象不是必须使用数据来构成，实际上过程可以完成所有事，例如复合数据的基本方法cons、car、cdr：
+#+BEGIN_SRC emacs-lisp
+  (defun lec2-cons (a b)
+    "cons for elisp"
+    (setq lexical-binding t)
+    (lambda (x)
+      (if (= 1 x)
+          a
+        b)))
+
+  (defun lec2-car (x)
+    "car for elisp"
+    (funcall x 1))
+
+  (defun lec2-cdr (x)
+    "cdr for elisp"
+    (funcall x 2))
+
+  (lec2-car (lec2-cons 3 4))
+  (lec2-cdr (lec2-cons 2 3))
+  (lec2-car (lec2-car (lec2-cons (lec2-cons 4 5) 6)))
+#+END_SRC
+
+可以看到，cons并没有用任何数据结构来存储3、4，只是产生了一个过程；而作为上层调用者，并不知道这一点。我们认为cons是产生了一个序对，是一个数据结构，用来存储两个相关的数据；但实际上这个结构却是通过过程来完成构建的。过程和数据间的界限几乎不存在：过程也是对象，并且也能命名。

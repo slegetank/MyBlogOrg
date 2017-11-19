@@ -1,0 +1,73 @@
+#+TITLE: SICP笔记 - 3
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-05-30 14:29>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Software Engineering
+
+#+BEGIN_COMMENT PREVIEW
+
+video:
+http://v.youku.com/v_show/id_XODk4NjUwODMy.html
+http://v.youku.com/v_show/id_XODk4NjUwODA0.html
+
+#+END_COMMENT
+
+* Lec3a
+** List
+lisp以链表的形式构建list。即每个序对的第一个元素保存数据，第二个元素指向下一个序对。
+
+list元素乘n：
+#+BEGIN_SRC emacs-lisp
+  (defun multi-list (l n)
+    "Mlitiple items of list by n"
+    (if (null l)
+        l
+      (cons (* n (car l)) (multi-list (cdr l) n))))
+
+  (multi-list '(1 2 3 4) 4)
+#+END_SRC
+
+而更深的抽象则是map，即对list中的每个元素作出处理:
+#+BEGIN_SRC emacs-lisp
+  (defun lec3-map (l func)
+    "map for lec3"
+    (if (null l)
+        l
+      (cons (funcall func (car l)) (lec3-map (cdr l) func))))
+
+  (lec3-map '(1 2 3 4) '(lambda (item) (+ 5 item)))
+#+END_SRC
+
+而更高阶的处理是用前面学习的高阶过程，这样得到的方法能得到更好的重用：
+#+BEGIN_SRC emacs-lisp
+  (defun lec3-map2 (func)
+    "Higher order version"
+    (setq lexical-binding t)
+    (lambda (l)
+      (if (null l)
+          l
+        (cons (funcall func (car l)) (funcall (lec3-map2 func) (cdr l))))))
+
+  (setq each-item-plus-five (lec3-map2 '(lambda (item) (+ 5 item))))
+
+  (funcall each-item-plus-five '(1 2 3 4))
+  (funcall each-item-plus-five '(3 4 5))
+  (funcall each-item-plus-five '(2 2 2))
+#+END_SRC
+** 元语言抽象 (meta-linguistic abstraction)
+用建立适合于当前情况的语言来控制复杂度。即，使用分层的手段，将要解决的具体问题分成几个层面，在每一层实现一套元语用来描述这一层要解决的问题。
+在所举的图形的例子中，使用过程来表示图像，并且使用了其闭包的性质。
+
+健壮的系统应该对小的变化不敏感，也就是说问题（需求）中小的改变只会造成
+解决方案中小的改变。因此，与其在开始设计的时候就将所有问题分解成子任务，
+不如将子问题归类成一类问题（分层），然后在这一层上构造一门语言，使得我
+们可以用这门语言来描述这类问题。这样当问题发生改变时，在那一层上我们有
+一门语言来描述类似问题的各种解法。所以在Lisp中，解决问题的手段更像是实
+现一门语言而不是实现一个程序。
+
+* Lec3b
+引入引号操作符，即讨论表达式本身而不是调用表达式。这样，就能编写讨论表
+达式的表达式。
+
+
