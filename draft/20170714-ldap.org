@@ -15,3 +15,7 @@ pip install python-ldap \
    --global-option=build_ext \
    --global-option="-I$(xcrun --show-sdk-path)/usr/include/sasl"
 #+END_SRC
+
+注意 安装的是python-ldap而非ldap。如果已经安装了ldap，需要先将其卸载。
+
+安装完成后，需要到venv/lib/python2.7/site-packages/ldap/ldapobject.py或/Library/Python/2.7/site-packages/ldap/ldapobject.py中将一句判断PY2的text_type由unicode转为str，否则有可能引起错误。

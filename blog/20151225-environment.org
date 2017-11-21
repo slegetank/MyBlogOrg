@@ -84,22 +84,23 @@ sourcetree
 ** 其他包
 requests
 已整合入脚本。
-*  其他
-| Name          | Comment          |
-| QQ            |                  |
-| FireFox       |                  |
-| 坚果云        |                  |
-| sougou        |                  |
-| Dash          | 文档             |
-| PAW           | http测试工具     |
-| OmniGraffle   | 流程图等图表专用 |
-| LICEcap       | gif录制          |
-| Meld          | 文件对比工具     |
-| VMWare Fusion | 虚拟机           |
-| mpv           | 播放器           |
-| SecureCRT     | 远程终端         |
-| Screenflick   | 屏幕录制         |
-| Soundflower   | 虚拟声卡         |
-| Boxer         | Dos游戏模拟器    |
-| Nestopia      | nes模拟器        |
-| DeSmuME       | des模拟器        |
+* 其他
+| Name          | Comment             |
+| QQ            |                     |
+| FireFox       |                     |
+| 坚果云        |                     |
+| sougou        |                     |
+| Dash          | 文档                |
+| PAW           | http测试工具        |
+| OmniGraffle   | 流程图等图表专用    |
+| LICEcap       | gif录制             |
+| Meld          | 文件对比工具        |
+| VMWare Fusion | 虚拟机              |
+| mpv           | 播放器              |
+| SecureCRT     | 远程终端            |
+| Screenflick   | 屏幕录制            |
+| Soundflower   | 虚拟声卡            |
+| Boxer         | Dos游戏模拟器       |
+| Nestopia      | nes模拟器           |
+| DeSmuME       | des模拟器           |
+| Spectacle     | 按键调整mac app布局 |

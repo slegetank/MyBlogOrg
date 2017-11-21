@@ -21,7 +21,23 @@ https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-s
 Mac:
 ImportError: No module named MySQLdb
 brew install mysql-connector-c
+or
+brew install mysql
 pip install MySQL-python
+
+python最好也用brew重装一遍
+
+如果遇到下面的错误：
+#+BEGIN_SRC shell
+  ld: library not found for -lssl
+  clang: error: linker command failed with exit code 1 (use -v to see invocation)
+  error: command 'cc' failed with exit status 1
+#+END_SRC
+
+则需要安装一下xcode的命令行工具：
+#+BEGIN_SRC shell
+  xcode-select --install
+#+END_SRC
 
 允许指定用户访问数据库：
 #+BEGIN_SRC sql

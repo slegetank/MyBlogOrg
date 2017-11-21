@@ -130,6 +130,12 @@ tern是一个JS的语法分析接口工具，用来帮助连接后端语法分�
   }
 #+END_SRC
 
+** prettier-js - js格式美化
+https://github.com/prettier/prettier
+#+BEGIN_SRC js
+  sudo npm -g install tern-jsx
+#+END_SRC
+配合编辑器自身的设置，可以使写出的js更漂亮
 ** Firefox
 fb为react开发提供了浏览器插件([[https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html][doc]])，这里我们选择Firefox。
 打开 https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ ，下载并安装。这时打开Firefox的工具箱(option+command+i)就会看到多了一个"React"选项卡。
