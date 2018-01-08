@@ -1,0 +1,29 @@
+#+TITLE: OLPC XO-1 配置记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-11-29 13:15>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: other
+
+#+BEGIN_COMMENT PREVIEW
+
+RMS使用过的神器[[https://www.stallman.org/stallman-computing.html]]，心向往，遂折腾之。
+
+#+END_COMMENT
+
+* 硬件
+* 升级系统
+** 升级固件
+在这里下载固件：http://wiki.laptop.org/go/Upgrading_firmware
+
+如果英语过关，跟着上面的步骤做就行了。大概步骤就是:
+1. 下载bootfw.zip
+2. 在u盘上新建boot文件夹
+3. 将bootfw.zip拷贝进去
+4. 将u盘插在OLPC上
+5. 按住电源键上方的x键，然后按电源键开机，此时开始固件自动升级
+
+** 升级系统
+目前XO-1最新的系统为[[http://wiki.laptop.org/go/Release_notes/13.2.8][13.2.8]] 。所有的对应版本在这里：http://wiki.laptop.org/go/Release_notes 。
+
+

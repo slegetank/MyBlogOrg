@@ -33,6 +33,9 @@ https://facebook.github.io/react-native/docs/tutorial.html
 emacs:
 http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
 
+** rjsx-mode
+[[https://github.com/felipeochoa/rjsx-mode]]
+目前最好用的主模式，比另外的那个jsx-mode好使。其补全要比tern更好用。tern现在的致命伤是对jsx支持的很不友好，其相关插件都这样。
 ** eslint -  语法动态检查
 eslint是一个比较新的js代码语法检测工具，这里我们用它作为语法检测的后端。
 
@@ -106,15 +109,31 @@ eslint是一个比较新的js代码语法检测工具，这里我们用它作为
     http://stackoverflow.com/questions/37144786/es6-early-use-of-classes/37145465
 + color literal
     https://github.com/Intellicode/eslint-plugin-react-native/blob/master/docs/rules/no-color-literals.md
-
+** prettier-js - js格式美化
+https://github.com/prettier/prettier
+#+BEGIN_SRC js
+  sudo npm -g install tern-jsx
+#+END_SRC
+配合编辑器自身的设置，可以使写出的js更漂亮
+emacs配置参考： https://github.com/prettier/prettier-emacs
+** Firefox
+fb为react开发提供了浏览器插件([[https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html][doc]])，这里我们选择Firefox。
+打开 https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ ，下载并安装。这时打开Firefox的工具箱(option+command+i)就会看到多了一个"React"选项卡。
+*** 改变Firefox从外部调起时的行为方式
+由于我们后面希望调用"open -a Firefox ..."的时候能刷新页面而不是打开一个新的tab，所以我们需要改变Firefox的默认方式。([[https://www.ghacks.net/2009/07/03/force-firefox-to-open-links-in-same-tab/][doc]])
+1 在地址栏输入about:config
+2 搜索browser.link.open_newwindow.override.external，默认值为-1，将值改为1 。
+** emacs
 ** tern - 自动补全
+注：目前tern有问题，对jsx支持的很差。
+
 tern是一个JS的语法分析接口工具，用来帮助连接后端语法分析工具以及前端编辑器。
 #+BEGIN_SRC sh
   sudo npm -g install tern
 #+END_SRC
 并且安装插件：
 #+BEGIN_SRC sh
-  sudo npm -g install tern-jsx
+  sudo npm -g install tern-jsx tern-react
 #+END_SRC
 
 然后在工程下新建配置文件.tern-project, 添加以下代码：
@@ -125,25 +144,11 @@ tern是一个JS的语法分析接口工具，用来帮助连接后端语法分�
           "jquery"
       ],
       "plugins": {
-          "jsx": {}
+          "jsx": {},
+          "react": {}
       }
   }
 #+END_SRC
-
-** prettier-js - js格式美化
-https://github.com/prettier/prettier
-#+BEGIN_SRC js
-  sudo npm -g install tern-jsx
-#+END_SRC
-配合编辑器自身的设置，可以使写出的js更漂亮
-** Firefox
-fb为react开发提供了浏览器插件([[https://facebook.github.io/react/blog/2015/09/02/new-react-developer-tools.html][doc]])，这里我们选择Firefox。
-打开 https://addons.mozilla.org/en-US/firefox/addon/react-devtools/ ，下载并安装。这时打开Firefox的工具箱(option+command+i)就会看到多了一个"React"选项卡。
-*** 改变Firefox从外部调起时的行为方式
-由于我们后面希望调用"open -a Firefox ..."的时候能刷新页面而不是打开一个新的tab，所以我们需要改变Firefox的默认方式。([[https://www.ghacks.net/2009/07/03/force-firefox-to-open-links-in-same-tab/][doc]])
-1 在地址栏输入about:config
-2 搜索browser.link.open_newwindow.override.external，默认值为-1，将值改为1 。
-** emacs
 * react 路线图
 ** JavaScript
 JavaScript在最初设计出来的时候名为LiveScript，但是后来为了顺便搭当时大火的Java的顺风车，因而被重命名为JavaScript，其实它与Java的并没有太大关系。就像其他后来语言一样，它在语法上是类C的，但是其内在更接近于Lisp，这点和python很像。这篇js的教程写的很好，如果觉得必要的话可以复习一下：https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript 。

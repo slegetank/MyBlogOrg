@@ -3,6 +3,7 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * emacs
+** [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][<2018-01-03 13:00> 《人类简史 从动物到上帝》读后总结]]
 ** [[file:blog/20170826-emacsChart.org][<2017-08-26 10:56> Emacs图表优雅的解决方案]]
 
 * Emacs

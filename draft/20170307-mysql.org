@@ -11,22 +11,42 @@
 
 #+END_COMMENT
 
-Debian:
+* Debian
 apt-get install mysql-server mysql-client
 http://linux.it.net.cn/e/data/mysql/2016/0102/19361.html
 
 开放远程访问权限：
 https://www.cyberciti.biz/tips/how-do-i-enable-remote-access-to-mysql-database-server.html
 
-Mac:
-ImportError: No module named MySQLdb
-brew install mysql-connector-c
-or
+* Mac
+** 安装
+参照 https://www.jianshu.com/p/fd3aae701db9
+很简单，即下载安装；在设置里start；重置密码即可。
+** 建表
+1. 将建表语句保存到一个文件里，例如(create.sql)：
+    #+BEGIN_SRC sql
+    create database LinkplayDeveloper;
+    use LinkplayDeveloper;
+    create table Developer
+    (
+    `id` int not null auto_increment primary key,
+    `account` char(50) not null,
+    `localizePermission` varchar(500) not null
+    );
+    #+END_SRC
+2. 执行语句：
+    #+BEGIN_SRC sql
+      mysql -uroot -p < ./create.sql
+    #+END_SRC
+    就会自动的执行建表语句了。
+
+** ImportError: No module named MySQLdb
 brew install mysql
 pip install MySQL-python
 
 python最好也用brew重装一遍
 
+** ld: library not found for -lssl
 如果遇到下面的错误：
 #+BEGIN_SRC shell
   ld: library not found for -lssl
@@ -39,7 +59,7 @@ python最好也用brew重装一遍
   xcode-select --install
 #+END_SRC
 
-允许指定用户访问数据库：
+** 允许指定用户访问数据库：
 #+BEGIN_SRC sql
   GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' 
   IDENTIFIED BY 'YOUR_PASS' 
@@ -49,5 +69,5 @@ python最好也用brew重装一遍
 *.* = DB.TABLE，可以用其限制指定用户只能访问指定库。
 'root'@'%' root用来限定用户，%指代所有IP，用来限制IP，例如%.168.1.1。
 
-utf8
+** utf8
 https://www.linuxzen.com/sqlalchemy-mysqlshu-ju-ku-luan-ma-jie-jue.html

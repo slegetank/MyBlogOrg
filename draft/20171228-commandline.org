@@ -1,0 +1,17 @@
+#+TITLE: 命令行配置记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2017-12-28 18:03>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+记录，以备查阅
+
+#+END_COMMENT
+
+* zsh
+zsh-autosuggestions
+
+https://github.com/zsh-users/zsh-autosuggestions

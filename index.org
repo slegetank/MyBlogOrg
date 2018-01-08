@@ -2,6 +2,19 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][《人类简史 从动物到上帝》读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180103-sqpiensABriefHistoryofHumankind.html
+  :PUBDATE:  <2018-01-03 13:00>
+  :END:
+<2018-01-03 13:00> | emacs
+
+
+Sapiens - A Brief History of Humankind
+读后总结
+
+[[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][Read More...]]
+-----
 * [[file:blog/20170826-emacsChart.org][Emacs图表优雅的解决方案]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20170826-emacsChart.html
