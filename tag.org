@@ -3,7 +3,6 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * emacs
-** [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][<2018-01-03 13:00> 《人类简史 从动物到上帝》读后总结]]
 ** [[file:blog/20170826-emacsChart.org][<2017-08-26 10:56> Emacs图表优雅的解决方案]]
 
 * Emacs
@@ -19,6 +18,8 @@
 ** [[file:blog/20151225-environment.org][<2015-12-25 10:49> 工作环境配置记录]]
 
 * Book
+** [[file:blog/20180113-booklist.org][<2018-01-13 14:20> 书单]]
+** [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][<2018-01-03 13:00> 《人类简史 从动物到上帝》读后总结]]
 ** [[file:blog/20161120-AmericaPoliticalCutlture.org][<2016-11-20 17:05> 权力是靠不住的 - 美国政治文化探析 读后总结]]
 ** [[file:blog/20161112-chinafoundworld.org][<2016-11-12 16:05> 从海图中所读到的历史--《1421年中国发现世界》读后总结]]
 ** [[file:blog/20160716-WutheringHeights.org][<2016-07-16 17:32> 输了你，赢了世界又如何 -- 呼啸山庄读后感]]

@@ -1,0 +1,10 @@
+#+TITLE: Emacs特殊保存机制学习
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-01-10 10:32>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+#+END_COMMENT

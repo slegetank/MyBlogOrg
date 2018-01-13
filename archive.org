@@ -3,6 +3,7 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * 2018
+** [[file:blog/20180113-booklist.org][<2018-01-13 14:20> 书单]]
 ** [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][<2018-01-03 13:00> 《人类简史 从动物到上帝》读后总结]]
 
 * 2017
