@@ -3,7 +3,7 @@
 #+AUTHOR: slegetank
 #+EMAIL: slege_tank@163.com
 #+DATE: <2013-04-01 17:31>
-#+BLOGTYPE: iOS
+#+BLOGTYPE: IOS
 
 #+BEGIN_COMMENT PREVIEW
 

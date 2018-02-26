@@ -3,7 +3,7 @@
 #+EMAIL: slege_tank@163.com
 #+DATE: <2016-07-21 14:52>
 #+SETUPFILE: ~/.emacs.d/org-template/level-1.org
-#+blogtype: iOS
+#+blogtype: IOS
 
 #+BEGIN_COMMENT PREVIEW
 
@@ -23,7 +23,7 @@ OC中block的语法实在是太别扭了，不知道是不是我太孤陋寡闻�
   @property (nonatomic, copy, nullability) returnType (^blockName)(parameterTypes);
 
   As a method parameter:
-  - (void)someMethodThatTakesABlock:(returnType (^nullability)(parameterTypes))blockName;
+  - (void)someMethodThatTakesABlock:(returnType (^)(parameterTypes))blockName;
 
   As an argument to a method call:
   [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];

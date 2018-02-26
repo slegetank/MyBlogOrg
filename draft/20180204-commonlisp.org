@@ -1,0 +1,90 @@
+#+TITLE: Commonlisp学习笔记
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-02-04 22:54>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Computer Knowledge
+
+#+BEGIN_COMMENT PREVIEW
+
+Land of Lisp
+
+#+END_COMMENT
+
+* 变量及list
+1. 全局变量定义：
+#+BEGIN_SRC lisp
+  (defparameter *big* 100)
+  (defvar *big* 100)
+#+END_SRC
+
+其中，两边的*是习惯。defvar不会覆盖之前定义的值。
+
+2. setf用于改变变量的值。
+#+BEGIN_SRC lisp
+  (setf *big* 1)
+#+END_SRC
+
+3. let用于定义局部变量，flet用于定义局部函数。
+labels类似于let*，即后面定义的函数可以用前面定义的函数。
+#+BEGIN_SRC lisp
+  (labels ((f1 (n)
+             (+ n 5))
+           (f2 (n)
+             (+ (f1 n) 6)))
+    (f2 10))
+#+END_SRC
+
+4. 与el不同，cl是不区分大小写的：
+#+BEGIN_SRC lisp
+  (eq 'foo 'fOO)
+#+END_SRC
+
+5. cons list
+#+BEGIN_SRC lisp
+  (cons 'a (cons 'b (cons 'c nil)))
+  (cons 'a '(b c))
+  (cons '(a b) 'c)
+  (list 'a '(b c))
+#+END_SRC
+
+第一个式子等同于(list 'a 'b 'c)
+第二个式子也相等，因为'(b c)是一个list
+第三个式子是一个dotted pair，因为'c并不是一个list
+list是由dotted pair组成的，最后一个元素是nil
+
+* 条件
+(equal nil ())
+这在scheme里不相等，但cl与el认为相同
+
+条件语句不是函数，而是special form.
+if 需要progn，而when unless cond都不需要。
+
+case语句（注意只能比较symbol，不能比较字符串）：
+#+BEGIN_SRC lisp
+  (let ((a 4))
+    (case a
+      ((1) (print "1"))
+      ((2) (print "2"))
+      (otherwise (print "3"))))
+#+END_SRC
+
+equal eq
+1. eq 比较 symbol
+2. 其他比较用equal
+* text
+#+BEGIN_SRC lisp
+  (defparameter *testa* '((a 1) (b 2) (c 3)))
+  (cadr (assoc 'a *testa*))
+
+  (defun get-value-from-dic (key list)
+    (cadr (assoc key list)))
+  (get-value-from-dic 'c *testa*)
+#+END_SRC
+以键值对的方式取值。将全局变量以参数的形式传入是函数式编程的特点，这样可以保证函数对于相同输入总是返回相同输出。
+
+' `都是将代码从code模式转为data模式，只是`还可以用,再转回code模式，就像翅膀一样：
+#+BEGIN_SRC lisp
+  `(a ,(+ 1 1) (+ 1 1))
+#+END_SRC
+

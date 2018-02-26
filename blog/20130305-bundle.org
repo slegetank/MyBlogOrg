@@ -1,7 +1,7 @@
 #+SETUPFILE: ~/.emacs.d/org-template/level-1.org
 #+title: iOS插件化开发之bundle
 #+date: <2013-03-05 11:32>
-#+blogtype: iOS
+#+blogtype: IOS
 
 #+BEGIN_COMMENT PREVIEW
 博客迁移。

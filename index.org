@@ -2,6 +2,18 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20180210-rhythumFromTheUniverse.org][星空的琴弦 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180210-rhythumFromTheUniverse.html
+  :PUBDATE:  <2018-02-10 13:33>
+  :END:
+<2018-02-10 13:33> | Book
+
+
+天文学八卦
+
+[[file:blog/20180210-rhythumFromTheUniverse.org][Read More...]]
+-----
 * [[file:blog/20180113-booklist.org][书单]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20180113-booklist.html
@@ -32,7 +44,7 @@ Sapiens - A Brief History of Humankind
   :RSS_PERMALINK: blog/20170826-emacsChart.html
   :PUBDATE:  <2017-08-26 10:56>
   :END:
-<2017-08-26 10:56> | emacs
+<2017-08-26 10:56> | Emacs
 
 
 程序员工作中经常需要画图表，例如流程图、类图等。而作为生产力工具的Emacs自然也提供了(或者说不甘寂寞的程序员为其提供了)相应的解决方案。
@@ -140,7 +152,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20160825-iOSSign.html
   :PUBDATE:  <2016-08-25 21:38>
   :END:
-<2016-08-25 21:38> | iOS
+<2016-08-25 21:38> | IOS
 
 
 迁移。尝试用openssl解释苹果的签名行为。
@@ -164,7 +176,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20160721-block.html
   :PUBDATE:  <2016-07-21 14:52>
   :END:
-<2016-07-21 14:52> | iOS
+<2016-07-21 14:52> | IOS
 
 
 迁移。
@@ -250,7 +262,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20130420-unittest.html
   :PUBDATE:  <2013-04-20 18:21>
   :END:
-<2013-04-20 18:21> | iOS
+<2013-04-20 18:21> | IOS
 
 
 迁移。惭愧，这个一直没能实践。
@@ -262,7 +274,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20130407-staticLibrary.html
   :PUBDATE:  <2013-04-07 19:23>
   :END:
-<2013-04-07 19:23> | iOS
+<2013-04-07 19:23> | IOS
 
 迁移
 [[file:blog/20130407-staticLibrary.org][Read More...]]
@@ -284,7 +296,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20130401-MVC.html
   :PUBDATE:  <2013-04-01 17:31>
   :END:
-<2013-04-01 17:31> | iOS
+<2013-04-01 17:31> | IOS
 
 
 迁移。App程序员的必备知识。
@@ -296,7 +308,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20130305-bundle.html
   :PUBDATE:  <2013-03-05 11:32>
   :END:
-<2013-03-05 11:32> | iOS
+<2013-03-05 11:32> | IOS
 
 博客迁移。
 [[file:blog/20130305-bundle.org][Read More...]]
@@ -306,7 +318,7 @@ Dired作为emacs的目录管理工具，必学。
   :RSS_PERMALINK: blog/20130304-plugin.html
   :PUBDATE:  <2013-03-04 15:44>
   :END:
-<2013-03-04 15:44> | iOS
+<2013-03-04 15:44> | IOS
 
 博客迁移。
 Bundle的应用，虽然这玩意到现在还是没有什么实用价值。

@@ -3,7 +3,7 @@
 #+EMAIL: slege_tank@163.com
 #+DATE: <2017-02-03 10:50>
 #+SETUPFILE: ~/.emacs.d/org-template/level-1.org
-#+blogtype: other
+#+blogtype: Other
 
 #+BEGIN_COMMENT PREVIEW
 

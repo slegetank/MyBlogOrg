@@ -1,0 +1,20 @@
+#+TITLE: 一些git使用记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-01-28 14:08>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Tools
+
+#+BEGIN_COMMENT PREVIEW
+
+一些常见的使用场景
+
+#+END_COMMENT
+
+* 使用新分支覆盖旧分支(develop -> master)
+#+BEGIN_SRC shell
+  git checkout develop
+  git merge -s ours master # 发生冲突时使用当前分支覆盖
+  git checkout master
+  git merge --squash develop
+#+END_SRC
