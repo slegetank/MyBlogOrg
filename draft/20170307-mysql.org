@@ -46,6 +46,17 @@ pip install MySQL-python
 
 python最好也用brew重装一遍
 
+MySQLdb不支持python3，所以
+#+BEGIN_SRC shell
+  pip3 install pymysql
+#+END_SRC
+
+并且在网站的__init__.py里
+#+BEGIN_SRC python
+  import pymysql
+  pymysql.install_as_MySQLdb()
+#+END_SRC
+
 ** ld: library not found for -lssl
 如果遇到下面的错误：
 #+BEGIN_SRC shell
