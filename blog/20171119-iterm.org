@@ -14,6 +14,7 @@ iTerm + zsh + oh-my-zsh，很好很强大。
 
 * iTerm
 iTerm是Mac上最好用的终端app，即下即用：http://www.iterm2.com/。
+对于它有哪些好用的功能，可以参看这里：https://www.iterm2.com/documentation-highlights.html
 iTerm提供了很好的对于字体、颜色的自定义接口以及窗体等的边界访问，下面将会用到。
 ** itermocil
 这是一个iTerm的插件，因此不放到下面的插件部分了：https://github.com/TomAnthony/itermocil 。
@@ -82,7 +83,6 @@ Oh My Zsh，POWER OVERWHELMING!
 | c-r      | Incrementally search command |
 | c-a/c-e  | 行首、行尾                   |
 | c-w      | 删除最后一个单词             |
-| !!       | 执行最后一条指令             |
 
 ** 一些常被忽略的用法
 1. ...
@@ -94,6 +94,10 @@ Oh My Zsh，POWER OVERWHELMING!
 4. 唤起
    可以设置快捷键在任何地方唤起iTerm。
    Preferences -> keys -> Show/hide all windows with a system-wide hotkey设置一个快捷键，例如"ctrl-super-,"。
+5. 时间戳
+   iterm的又一好用功能。View -> Show Timestamps，这时在屏幕右侧会出现每个命令的时间戳。
+6. 恢复窗口
+   一不小心把session关了，s-z重新打开。
 
 * 配置
 好的，现在材料已经备齐，开始配置。
@@ -282,10 +286,10 @@ https://github.com/zsh-users/antigen
 [[file:../static/20171119-iterm-2.png]]
 
 + 安装：
-先brew install fsf
+先brew install fzf
 
 #+BEGIN_SRC shell
-  antigen bundle psprint/history-search-multi-word
+  antigen bundle changyuheng/zsh-interactive-cd
 #+END_SRC
 
 + 使用：
@@ -293,10 +297,8 @@ https://github.com/zsh-users/antigen
   
 ** zsh-vimto
 + 安装：
-  先brew install fsf
-
 #+BEGIN_SRC shell
-  antigen bundle psprint/history-search-multi-word
+  antigen bundle laurenkt/zsh-vimto
 #+END_SRC
 
 + 使用：

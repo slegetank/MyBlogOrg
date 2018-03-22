@@ -2,6 +2,30 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20180304-shapeoftime.org][时间的形状 读后感]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180304-shapeoftime.html
+  :PUBDATE:  <2018-03-04 11:20>
+  :END:
+<2018-03-04 11:20> | Book
+
+
+相对论科普
+
+[[file:blog/20180304-shapeoftime.org][Read More...]]
+-----
+* [[file:blog/20180304-firstbattleofnewchina.org][开国第一战 读后感]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180304-firstbattleofnewchina.html
+  :PUBDATE:  <2018-03-04 15:08>
+  :END:
+<2018-03-04 15:08> | Book
+
+
+一条大河波浪宽
+
+[[file:blog/20180304-firstbattleofnewchina.org][Read More...]]
+-----
 * [[file:blog/20180210-rhythumFromTheUniverse.org][星空的琴弦 读后总结]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20180210-rhythumFromTheUniverse.html
@@ -39,6 +63,19 @@ Sapiens - A Brief History of Humankind
 
 [[file:blog/20180103-sqpiensABriefHistoryofHumankind.org][Read More...]]
 -----
+* [[file:blog/20171119-iterm.org][高效使用iTerm]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20171119-iterm.html
+  :PUBDATE:  <2017-11-19 18:58>
+  :END:
+<2017-11-19 18:58> | Helper
+
+
+程序员的三大件基本上就是浏览器（Browser）、编辑器（Editor）和终端（Terminal）。每个程序员都需要一个好用的终端工具才能事半功倍。
+iTerm + zsh + oh-my-zsh，很好很强大。
+
+[[file:blog/20171119-iterm.org][Read More...]]
+-----
 * [[file:blog/20170826-emacsChart.org][Emacs图表优雅的解决方案]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20170826-emacsChart.html
@@ -52,6 +89,34 @@ Sapiens - A Brief History of Humankind
 方案来自于这里： [[https://www.youtube.com/watch?v=cIuX87Xo8Fc][Poor Man's UML / Emacs Artist Mode and Ditaa Demo]] 大光头讲的比我好，这里只是整理一下安装流程。
 
 [[file:blog/20170826-emacsChart.org][Read More...]]
+-----
+* [[file:blog/20170529-SICP_lec2.org][SICP笔记 - 2 高阶过程]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20170529-SICP_lec2.html
+  :PUBDATE:  <2017-05-29 15:20>
+  :END:
+<2017-05-29 15:20> | Software Engineering
+
+
+video:
+http://v.youku.com/v_show/id_XNzAzNjI1NjU2.html
+http://v.youku.com/v_show/id_XNzAzNjg4Mjk2.html
+
+[[file:blog/20170529-SICP_lec2.org][Read More...]]
+-----
+* [[file:blog/20170514-SICP_lec1.org][SICP笔记 - 1 概述]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20170514-SICP_lec1.html
+  :PUBDATE:  <2017-05-14 01:12>
+  :END:
+<2017-05-14 01:12> | Software Engineering
+
+
+video:
+http://v.youku.com/v_show/id_XNTEzMDAyMTU2.html
+http://v.youku.com/v_show/id_XNTMxODY1NTg4.html
+
+[[file:blog/20170514-SICP_lec1.org][Read More...]]
 -----
 * [[file:blog/20170328-mu4e.org][Mail with Emacs]]
   :PROPERTIES:

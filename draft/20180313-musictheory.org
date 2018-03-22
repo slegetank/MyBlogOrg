@@ -1,0 +1,32 @@
+#+TITLE: 乐理
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-03-13 12:30>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Other
+
+#+BEGIN_COMMENT PREVIEW
+
+#+END_COMMENT
+
+大调 以1为主音 1结尾
+小调 以6为主音 6结尾
+
+1=C C大调
+1=D D大调
+
+* 音符
+3/4 1/4音符一拍 每小节3拍
+附点音符 所附音符的一半
+4/4 6. 表示一拍半
+2/4 4/. 3/4拍
+
+三连音当两个音的长度
+
+* 五线谱
+五线四间
+上下N线 上下N间
+
+高音谱号 G谱号
+音名：CDEFGAB
+下一线为C

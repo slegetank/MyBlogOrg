@@ -35,7 +35,7 @@ http://www.tug.org/mactex/morepackages.html
 #+BEGIN_SRC shell
   sudo tlmgr update --self
   sudo tlmgr install wrapfig
-  udo tlmgr install capt-of
+  sudo tlmgr install capt-of
 #+END_SRC
 
 终于导出成功。

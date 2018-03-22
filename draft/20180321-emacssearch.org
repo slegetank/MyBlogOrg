@@ -1,0 +1,14 @@
+#+TITLE: Emacs search & replace
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-03-21 14:51>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+搜索替换是文本编辑器的基本功能之一。
+
+#+END_COMMENT
+
+https://www.slideshare.net/kaz_yos/search-and-replacement-techniques-in-emacs-avy-swiper-multiplecursor-ag-and-wgrep
