@@ -2,6 +2,106 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20181007-1587.org][万历十五年 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181007-1587.html
+  :PUBDATE:  <2018-10-07 18:34>
+  :END:
+<2018-10-07 18:34> | Book
+
+
+我大明亡了
+
+[[file:blog/20181007-1587.org][Read More...]]
+-----
+* [[file:blog/20180915-zhihuiqizhu.org][智慧七柱 从麦加到大马士革]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180915-zhihuiqizhu.html
+  :PUBDATE:  <2018-09-15 18:30>
+  :END:
+<2018-09-15 18:30> | Book
+
+
+All men dream: but not equally. Those who dream by night in the dusty recesses of their minds wake in the day to find that it was vanity: but the dreamers of the day are dangerous men, for they may act their dreams with open eyes, to make it possible. This I did.
+
+[[file:blog/20180915-zhihuiqizhu.org][Read More...]]
+-----
+* [[file:blog/20180825-historyandgeography.org][历史的地理枢纽 总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180825-historyandgeography.html
+  :PUBDATE:  <2018-08-25 18:58>
+  :END:
+<2018-08-25 18:58> | Book
+
+
+谁统治东欧，谁就能主宰中心地带；
+谁统治心脏地带，谁就能主宰世界岛；
+谁统治世界岛，谁就能主宰全世界。
+
+[[file:blog/20180825-historyandgeography.org][Read More...]]
+-----
+* [[file:blog/20180819-shangjunshu.org][商君书 - 百代都行秦政法]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180819-shangjunshu.html
+  :PUBDATE:  <2018-08-19 09:56>
+  :END:
+<2018-08-19 09:56> | Book
+
+
+勿以恶小而为之，勿以善小而不为。惟贤惟德，能服于人。汝父德薄，勿效之。可读《汉书》、《礼记》，闲暇历观诸子及《六韬》、《商君书》益人意智。
+
+[[file:blog/20180819-shangjunshu.org][Read More...]]
+-----
+* [[file:blog/20180622-zenyangdanghaoyigeshizhang.org][读林彪《怎样当好一个师长》]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180622-zenyangdanghaoyigeshizhang.html
+  :PUBDATE:  <2018-06-22 13:16>
+  :END:
+<2018-06-22 13:16> | Book
+
+
+林彪当连长的时候，是全团战斗力最强的连；当营长的营，是全团最过硬的营；当团长的团，是红四军的头等主力团。最后东野从东北一直打到海南岛，51年接着打抗美援朝，即使不是林彪指挥，依然出了万岁军这种绝对主力；从此篇文章可以看出一二。
+
+[[file:blog/20180622-zenyangdanghaoyigeshizhang.org][Read More...]]
+-----
+* [[file:blog/20180517-chinaarise.org][伟大的中国工业革命 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180517-chinaarise.html
+  :PUBDATE:  <2018-05-17 20:31>
+  :END:
+<2018-05-17 20:31> | Book
+
+
+需求决定供给
+
+[[file:blog/20180517-chinaarise.org][Read More...]]
+-----
+* [[file:blog/20180507-lincoln.org][林肯传 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180507-lincoln.html
+  :PUBDATE:  <2018-05-07 19:27>
+  :END:
+<2018-05-07 19:27> | Book
+
+
+法律宗教
+统一国家
+解放黑奴
+
+[[file:blog/20180507-lincoln.org][Read More...]]
+-----
+* [[file:blog/20180422-imageprocess.org][图像处理小记录]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20180422-imageprocess.html
+  :PUBDATE:  <2018-04-22 18:33>
+  :END:
+<2018-04-22 18:33> | Tools
+
+
+日常的小图像处理记录。
+
+[[file:blog/20180422-imageprocess.org][Read More...]]
+-----
 * [[file:blog/20180304-shapeoftime.org][时间的形状 读后感]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20180304-shapeoftime.html

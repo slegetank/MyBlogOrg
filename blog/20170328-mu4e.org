@@ -54,6 +54,14 @@ github: https://github.com/OfflineIMAP/offlineimap
   brew install offlineimap
 #+END_SRC
 
+启动：
+#+BEGIN_SRC emacs-lisp
+  ;; Startup
+  brew services start offlineimap
+  ;; or
+  offlineimap
+#+END_SRC
+
 安装完成后，创建配置文件~/.offlineimaprc，写入如下配置：
 
 #+BEGIN_SRC python

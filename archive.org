@@ -3,6 +3,14 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * 2018
+** [[file:blog/20181007-1587.org][<2018-10-07 18:34> 万历十五年 读后总结]]
+** [[file:blog/20180915-zhihuiqizhu.org][<2018-09-15 18:30> 智慧七柱 从麦加到大马士革]]
+** [[file:blog/20180825-historyandgeography.org][<2018-08-25 18:58> 历史的地理枢纽 总结]]
+** [[file:blog/20180819-shangjunshu.org][<2018-08-19 09:56> 商君书 - 百代都行秦政法]]
+** [[file:blog/20180622-zenyangdanghaoyigeshizhang.org][<2018-06-22 13:16> 读林彪《怎样当好一个师长》]]
+** [[file:blog/20180517-chinaarise.org][<2018-05-17 20:31> 伟大的中国工业革命 读后总结]]
+** [[file:blog/20180507-lincoln.org][<2018-05-07 19:27> 林肯传 读后总结]]
+** [[file:blog/20180422-imageprocess.org][<2018-04-22 18:33> 图像处理小记录]]
 ** [[file:blog/20180304-shapeoftime.org][<2018-03-04 11:20> 时间的形状 读后感]]
 ** [[file:blog/20180304-firstbattleofnewchina.org][<2018-03-04 15:08> 开国第一战 读后感]]
 ** [[file:blog/20180210-rhythumFromTheUniverse.org][<2018-02-10 13:33> 星空的琴弦 读后总结]]

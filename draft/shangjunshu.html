@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-19 Sun 13:36 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>商君书 - 百代都行秦政法</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="slegetank" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../static/org.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">商君书 - 百代都行秦政法</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9df189d">1. 摘录</a>
+<ul>
+<li><a href="#org616848f">1.1. 更法</a>
+<ul>
+<li><a href="#org00194e7">1.1.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#org899441e">1.2. 垦令</a>
+<ul>
+<li><a href="#org7b1ac44">1.2.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#orgeb1ef09">1.3. 农战</a>
+<ul>
+<li><a href="#org15d78e5">1.3.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#org2249050">1.4. 去强</a>
+<ul>
+<li><a href="#org00a8a84">1.4.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#org1b1cfcc">1.5. 说民</a>
+<ul>
+<li><a href="#orgccd5451">1.5.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#org7116081">1.6. 算地</a>
+<ul>
+<li><a href="#org91aed6a">1.6.1. 小结</a></li>
+</ul>
+</li>
+<li><a href="#orgb15b10e">1.7. 开塞</a>
+<ul>
+<li><a href="#orge94b609">1.7.1. 小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org482a378">2. 总结</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9df189d" class="outline-2">
+<h2 id="org9df189d"><span class="section-number-2">1</span> 摘录</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org616848f" class="outline-3">
+<h3 id="org616848f"><span class="section-number-3">1.1</span> 更法</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+公孙鞅曰：“臣闻之：‘疑行无成，疑事无功。‘君亟定变法之虑，殆无顾天下之议之也。且夫有高人之行者，固见负于世；有独知之虑者，必见骜于民。语曰：’愚者暗于成事，知者见于未萌。民不可与虑始，而可与乐成。郭偃之法曰：‘论至德者不和于俗，成大功者不谋于众。’法者所以爱民也，礼者所以便事也。是以圣人苟可以强国，不法其故；苟可以利民，不循其礼。”<br />
+</p>
+
+<p>
+三代不同礼而王，五霸不同法而霸。<br />
+</p>
+
+<p>
+前世不同教，何古之法？&#x2026;各当时而立法，因事而制礼。&#x2026;臣故曰：治世不一道，便国不必法古。<br />
+</p>
+
+<p>
+穷巷多怪，曲学多辩<br />
+</p>
+</div>
+
+<div id="outline-container-org00194e7" class="outline-4">
+<h4 id="org00194e7"><span class="section-number-4">1.1.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+这篇很精彩，总起全书，想都摘下来。针对于传统势力的阻挠，商鞅对秦孝公说出了变法的合理性，然后仅仅用了二十年的时间使秦的国力一跃赶超山东六国，简直令人惊叹。大概翻译一下主干（最好看原文，很精彩）：<br />
+孝公说，“我变法恐怕天下议论我啊（当时的主流应该是复三代，而这毫无疑问是儒的主场。而儒的那一套看起来好看，用起来没有力量）。”商鞅说：“真理往往掌握在少数人手中，只要能够强国利民，不用理他们。”<br />
+甘龙说，“圣人、智者不变法也能使国家强盛，改变秦的传统习俗会被天下人非议的啊。君上三思。”商鞅说：“三代不同礼而王，五霸不同法而霸。智慧的人制法，而愚人遵守成法。这是个愚人，不足以与他讨论变法。”<br />
+杜挚说，“利不百，不变法，法古无过。君上三思。”商鞅说：“前世的政教本来就各不相同，何古之法？这些明君都是按照当时的国情制定出合乎自身发展的法制而已。所以说，治世不一道，便国不必法古。君上不要再疑虑了。”<br />
+孝公说，“我听说‘穷巷多怪，曲学多辩’，愚昧的人所嘲笑的，正是智者所悲哀的；狂妄的人所开心的，正是贤者所担忧的。我不会再因为世人的议论所疑惑了”，于是开始了变法。<br />
+</p>
+
+<p>
+变法的合理性是什么呢？三代、五霸这些强盛一时的国家都有自己独特的法制，他们都是当时的智者根据国家自己的需要自己指定的法令；而秦为弱国，因此因循守旧是不可取的，需要因地制宜的根据自己的需要制定出对应的法律才能变强。<br />
+“穷巷多怪，曲学多辩”用太祖的话说就是“庙小妖风大，池浅王八多”，异曲同工。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org899441e" class="outline-3">
+<h3 id="org899441e"><span class="section-number-3">1.2</span> 垦令</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+无宿治，则邪官不及为私利于民。而百官之情不相稽，则农有余日。<br />
+</p>
+
+<p>
+无以外权爵任与官，则民不贵学问，又不贱农。民不贵学，则愚；愚，则无外交；无外交别则国安不殆。<br />
+</p>
+
+<p>
+休居不听，则气不淫。行作不顾，则意必壹。<br />
+</p>
+
+<p>
+废逆旅<br />
+</p>
+</div>
+
+<div id="outline-container-org7b1ac44" class="outline-4">
+<h4 id="org7b1ac44"><span class="section-number-4">1.2.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+促进农业生产。具体有哪些制度呢？<br />
+重农抑商，百姓只能通过种地获得政府奖励；对不事生产的人按人头收税，减少所谓食客的数量；禁止粮食私自买卖，限制商人获利；禁止雇佣行为，最大程度的解放农业生产力。<br />
+废除旅馆<br />
+国家统一管理土地<br />
+对奢侈浪费的享乐行为克重税<br />
+连坐<br />
+不准随便搬家<br />
+不准到处宣讲奇闻轶事<br />
+官吏考核准则统一<br />
+加重各地关税，抑制商业<br />
+商人按照人头服徭役，使他们比务农还苦，这样商人就会减少，而百姓由于没有商人贩卖的奢侈品也就不需要额外花销，这样百姓就会富裕<br />
+</p>
+
+<p>
+商业对个人有利，然而对处于战争状态的国家不利；高谈阔论的文人也是如此，于强国无益。欲强军必农战。因此利用国家强制力使百姓去商从农，囤积粮食。虽然有钱人的欲望被抑制，然而对于最大多数底层百姓以及国家机器来讲，有力无害。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb1ef09" class="outline-3">
+<h3 id="orgeb1ef09"><span class="section-number-3">1.3</span> 农战</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+凡人主之所以劝民者，官爵也；国之所以兴者，农战也。<br />
+</p>
+
+<p>
+故豪杰皆可变业，务学《诗》、《书》，随从外权，上可以得显，下可以求官爵；要靡事商贾，为技艺，皆以避农战。<br />
+</p>
+
+<p>
+官法明，故不任知虑<br />
+</p>
+
+<p>
+今为国者多无要。朝廷之言治也，纷纷焉务相易也。是以其君惛于说，其官乱于言，其民惰而不农。故其境内之民，皆化而好辩、乐学，事商贾，为技艺，避农战。<br />
+</p>
+
+<p>
+圣人知治国之要，故令民归心于农。&#x2026;夫民之亲上死制也，以其旦暮从事于农。夫民之不可用也，见言谈游士事君之可以尊身也、商贾之可以富家也、技艺之足以口也。民见此三者之便且利也，则必避农。避农，则民轻其居。轻其居，则必不为上守战也。<br />
+</p>
+
+<p>
+故惟明君知好言之不可以强兵辟土也，惟圣人之治国作壹、抟之于农而已矣。<br />
+</p>
+</div>
+
+<div id="outline-container-org15d78e5" class="outline-4">
+<h4 id="org15d78e5"><span class="section-number-4">1.3.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+在群敌环伺的战国，国家如何才能强盛呢？农战，即种地、军事。如果国家不重农战而重用文人、商人、演员，那么百姓就会去从事这三种能更轻松获得名利的职业而不去从事更劳苦的农业、战争，这样这个国家就无法最大效率的获得军事上的能力。<br />
+</p>
+
+<p>
+所以只要法令严明，就不需要选用什么智虑之才，百姓都从事农战，国家自然就强大了。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2249050" class="outline-3">
+<h3 id="org2249050"><span class="section-number-3">1.4</span> 去强</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+主贵多变，国贵少变。<br />
+</p>
+
+<p>
+国强而不战，毒输于内，礼乐虱官生，必削；国遂战，毒输于敌，国无礼乐虱官，必强。<br />
+</p>
+
+<p>
+重罚轻赏，则上爱民，民死上；重赏轻罚，则上不爱民，民不死上。<br />
+</p>
+
+<p>
+怯民使以刑，必勇；勇民使以赏，则死。<br />
+</p>
+
+<p>
+治国能令贫者富、富者贫，则国多力，多力者王。王者刑九赏一，强国刑七赏三，削国刑五赏五。<br />
+</p>
+
+<p>
+能生不能杀，曰自攻之国，必削；能生能杀，曰攻敌之国，必强。<br />
+</p>
+
+<p>
+十里断者，国弱；九里断者，国强。以日治者王，以夜治者强，以宿治者削。<br />
+</p>
+
+<p>
+以刑去刑，国治，以刑致刑，国乱，故曰：行刑重轻，刑去事成，国强；重重而轻轻，刑至事生，国削。<br />
+</p>
+</div>
+
+<div id="outline-container-org00a8a84" class="outline-4">
+<h4 id="org00a8a84"><span class="section-number-4">1.4.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+去强，即国家如何处理对抗法令的现象。大概如下：<br />
+</p>
+<ol class="org-ol">
+<li>政令统一，降低执政成本<br /></li>
+<li>拉平贫富差距<br /></li>
+<li>国家聚集力量之后需要赢得对外战争，否则这股力量就会损害国家自身<br /></li>
+<li>重刑轻赏。如果国家能够赢得对外战争，这样国家就会有资本来进行赏赐；而重刑可以使百姓远离犯罪，轻赏可以使得赏赐显得尊荣。<br /></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1b1cfcc" class="outline-3">
+<h3 id="org1b1cfcc"><span class="section-number-3">1.5</span> 说民</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+用善，则民亲其亲；任奸，则民亲其制。<br />
+</p>
+
+<p>
+罚重，爵尊；赏轻，刑威。爵尊，上爱民；刑威，民死上。<br />
+</p>
+
+<p>
+故行刑，重其轻者，轻者不生，则重者无从至矣，此谓治之于其治者。行刑。重其重者，轻其轻者，轻者不止，则重者无从止矣，此谓治之于其乱也。故重轻，则刑去事成，国强；重重而轻轻，则刑至而事生，国削。<br />
+</p>
+
+<p>
+民勇，则赏之以其所欲；民怯，则杀之以其所恶。故怯民使之以刑，则勇；勇民使之以赏，则死。怯民勇，勇民死，国无敌者必王。<br />
+</p>
+
+<p>
+民贫则弱国，富则淫，淫则有虱，有虱则弱。故贫者益之以刑，则富；富者损之以赏，则贫。治国之举，贵令贫者富、富者贫。<br />
+</p>
+
+<p>
+刑生力，力生强，强生威，威生德，德生于刑。故刑多，则赏重；赏少，则刑重。<br />
+</p>
+
+<p>
+民之所欲万，而利之所出一。民非一，则无以致欲，故作一。作一则力抟，力抟则强。强而用，重强。故能生力，能杀力，曰攻敌之国，必强。塞私道以穷其志，启一门以致其欲，使民必先行其所要，然后致其所欲，故力多。力多而不用，则志穷；志穷，则有私；有私，则有弱。故能生力，不能杀力，曰自攻之国，必削。故曰：王者，国不蓄力，家不积粟。国不蓄力，下用也；家不积粟，上藏也。<br />
+</p>
+
+<p>
+国治：断家王，断官强，断君弱。重轻，刑去。&#x2026;故有道之国，治不听君，民不从官。<br />
+</p>
+</div>
+
+<div id="outline-container-orgccd5451" class="outline-4">
+<h4 id="orgccd5451"><span class="section-number-4">1.5.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+这篇讲述了商鞅对于其法令的一些基本原理的解释，其中很多与当时国家的正常执政思维是有冲突的。<br />
+</p>
+
+<p>
+为什么举奸而不是举贤？因为用贤人百姓就会亲近人而不是政府，而用尖刻的人百姓就会亲近法令而不是人。<br />
+</p>
+
+<p>
+为什么重罚轻赏？因为这样会凸显出奖赏的贵重。<br />
+</p>
+
+<p>
+为什么对轻罪要施重刑？因为这样就会使百姓连轻罪都不敢犯，最终达到改变社会风气，使任何人都不犯罪的理想状态；如果对重罪用重刑，对轻罪用轻刑，那么百姓仍然会去试图犯罪。<br />
+</p>
+
+<p>
+如何能够集结百姓的力量？国家限制百姓只能以农业或者战争才能出人头地，这样虽然百姓的欲望很多，但是只能通过这一途获利，那么自然能够聚集力量；而且必须赢得对外战争的胜利，否则这股力量就会损害国家自身。<br />
+</p>
+
+<p>
+为何要用法治而不是人治？因为用法治可以使普通人也知道该如何做；每个人都知道如何做，那么治理效率就会大大提高。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7116081" class="outline-3">
+<h3 id="org7116081"><span class="section-number-3">1.6</span> 算地</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+夫地大而不垦者，与无地同；民众而不用者，与无民同。故为国之数，务在垦草；用兵之道，务在壹赏。<br />
+</p>
+
+<p>
+民之性：饥而求食，劳而求佚，苦则索乐，辱则求荣，此民之情也。民之求利，失礼之法；求名，失性之常。奚以论其然也？今夫盗贼上犯君上之所禁，而下失臣民之礼，故名辱而身危，犹不止者，利也。其上世之士，衣不煖肤，食不满肠，苦其志意，劳其四肢，伤其五脏，而益裕广耳，非性之常也，而为之者，名也。故曰：名利之所凑，则民道之。<br />
+</p>
+
+<p>
+夫农，民之所苦；而战，民之所危也。犯其所苦、行其所危者，计也。故民生则计利，死则虑名。名利之所出，不可不审也。利出于地，则民尽力；名出于战，则民致死。<br />
+</p>
+
+<p>
+故天下一宅，而圜身资。民资重于身，而偏托势于外。<br />
+</p>
+
+<p>
+圣人非能以世之所易胜其所难也，必以其所难胜其所易。<br />
+</p>
+
+<p>
+资藏于地则朴，托危于外则惑。<br />
+</p>
+
+<p>
+故圣人之为国也，观俗立法则治，察国事本则宜。不观时俗，不察国本，则其法立而民乱，事剧而功寡。<br />
+</p>
+
+<p>
+夫刑者，所以禁邪也；而赏者，所以助禁也。<br />
+</p>
+
+<p>
+求显荣之门不一，则君子事势以成名。小人不避其禁，故刑烦。君子不设其令，则罚行。刑烦而罚行者，国多奸，则富者不能守其财，而贫者不能事其业，田荒而国贫。田荒，则民诈生；国贫，则上匮赏。<br />
+</p>
+</div>
+
+<div id="outline-container-org91aed6a" class="outline-4">
+<h4 id="org91aed6a"><span class="section-number-4">1.6.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+后面慢慢的有一些篇幅会与之前的理论有一些重合与补充。这篇主要论述的是为何要重农。人都为名利二字，生者为利，死后为名。所以要把百姓的名利所出都系在国内的土地上，否则百姓就会学习一身本领，这样所有国家对他们来说都能活，为什么还要为这个国家服务呢？<br />
+</p>
+
+<p>
+用赏赐辅助刑法，用重刑使人不敢犯禁，进而最终达到“去刑”的程度。如果刑罚不重，那么人们就会倾向于触犯刑罚，这样最终政府部门就会被这件事所拖累，而社会风气也不会向好。所以要“轻赏重刑”。<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb15b10e" class="outline-3">
+<h3 id="orgb15b10e"><span class="section-number-3">1.7</span> 开塞</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+圣人不法古，不脩今。法古则后于时，脩今则塞于势。周不法商，夏不法虞，三代异势，而皆可以王。故兴王有道，而持之异理。<br />
+</p>
+
+<p>
+古之民朴以厚，今之民巧以伪。故效于古者，先德而治；效于今者，前刑而法。此俗之所惑也。今世之所谓义者，将立民之所好，而废其所恶；此其所谓不义者，将立民之所恶，而废其所乐也。二者名贸实易，不可不察也。<br />
+</p>
+
+<p>
+故王者刑用于将过，则大邪不生；赏施于告奸，则细过不失。<br />
+</p>
+
+<p>
+故王者以赏禁，以刑劝<br />
+</p>
+</div>
+
+<div id="outline-container-orge94b609" class="outline-4">
+<h4 id="orge94b609"><span class="section-number-4">1.7.1</span> 小结</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+又是一篇经典章节，不好摘，否则又要全摘下来。这篇实际上展开了《更法》篇中没说的法家的整个理论根本。尝试梳理：<br />
+</p>
+
+<hr />
+<p>
+天地开而人生。人类一开始没有社会组织架构，大家行事的准则就是根据亲缘关系来定远近。大家都是自私的，那么当人越来越多之后，社会就会混乱，这时候就会出现谁的拳头硬谁就是老大的局面（就是原始的自然规则，弱肉强食）。<br />
+</p>
+
+<p>
+这时候贤人出现了。他们公正无私，以利他为己任，并且以推举的方式选出其他人（类似禅让、举孝廉）来作为仲裁人。这时，自私的思想被推崇贤德的思想所取代。但是随着人口更加多，这种方式也出现了弊端。因为下层的人毕竟不是贤人，他们没有准绳而贤人又肯定是不够的。<br />
+</p>
+
+<p>
+于是圣人出现了。他们指定了法律，并且设立了官职来维系法律，官员需要统一的领导，于是设立了君主。这时，推崇贤德的思想被尊重权贵的思想所取代。这三个时代虽然看起来思想是截然不同的，但实际上是当时的人根据社会的发展变化而做出的因地制宜的调整。<br />
+</p>
+
+<p>
+圣人不法古，不修今。效法古代和现代的其他例子都是不能很好的合乎自己的情势的。三代都是靠武力取得天下，而治理国家却都是用的仁义文教。<br />
+</p>
+
+<p>
+古代的民风淳朴，现在的百姓都很奸猾。所以上古用德治，而现在应该用法治。这是社会上所疑惑的地方。现在所谓的仁义之举，就是顺应百姓的喜好，而不义之举则是施行百姓所厌恶的措施。这两件事实际上是相反的（因为当世的民风是坏的）。所以我想用刑法来匡正民风，以复三代之治。<br />
+</p>
+
+<p>
+世间常用的手段是重罪重罚，轻罪轻罚；大功重赏，小功轻赏。但是这样刑罚并不能止罪，奖赏用在了促进仁义道德的上面也不会对犯罪有所作用。所以我认为应该对小罪用重罚，而赏应该用在告发犯罪方面，这样就会使任何人都不敢犯罪，这样小罪都没有人敢犯，那么整个社会的风气就会极大的提升。<br />
+</p>
+
+<p>
+君主是因为人多了混乱才诞生的，他的出现是与律法息息相关的。现在人们希望有君主但是却又希望能摆脱法律的束缚，实在是愚昧的。所以想要称王天下的君主一定会用法治来匡正社会的行为，用赏赐来禁止民众犯罪（而不是用来奖励所谓仁义），这样整个社会的风气就会好起来。<br />
+</p>
+<hr />
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org482a378" class="outline-2">
+<h2 id="org482a378"><span class="section-number-2">2</span> 总结</h2>
+</div>
+</div>
+</body>
+</html>

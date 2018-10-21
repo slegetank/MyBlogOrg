@@ -1,0 +1,15 @@
+#+TITLE: 苦难辉煌 读后总结
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-04-15 18:42>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Book
+
+#+BEGIN_COMMENT PREVIEW
+
+从第一次国共合作到西安事变。
+
+#+END_COMMENT
+
+* 摘录
+量变堆积历史，质变分割历史。

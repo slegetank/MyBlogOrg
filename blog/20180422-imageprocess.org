@@ -1,0 +1,25 @@
+#+TITLE: 图像处理小记录
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-04-22 18:33>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Tools
+
+#+BEGIN_COMMENT PREVIEW
+
+日常的小图像处理记录。
+
+#+END_COMMENT
+
+* 修改icon色调
+1. 用Acorn打开图片。
+   [[file:../static/20180422-imageprocess-0.png]]
+
+2. 在其上新建图层。
+   [[file:../static/20180422-imageprocess-1.png]]
+
+3. 用选色工具取到颜色，然后用颜料桶填充新建的图层。
+   [[file:../static/20180422-imageprocess-2.png]]
+   [[file:../static/20180422-imageprocess-3.png]]
+4. 选择新图层的Blending模式为Source Atop，大功告成。
+   [[file:../static/20180422-imageprocess-4.png]]
