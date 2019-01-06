@@ -1,0 +1,83 @@
+#+TITLE: Mode
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-12-16 20:05>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+描述emacs编辑行为的核心概念mode。
+
+#+END_COMMENT
+
+emacs中我们直接打交道的对象是buffer，决定buffer行为的则是mode，所以我们平常的配置行为实际上最基本的行为就是针对不同的编辑行为使用和调整mode。这里专门抽出一章来讲mode。
+
+* Major Mode
+当我们编辑c文件的时候，emacs会提供对于c的高亮、补全、跳转等的支持，而编辑python的时候又自动变成了python语言对应的行为。emacs对于这种不同类型的编辑提供的解决方案是mode，也就是抽象出了mode层来应对不同编辑方式的变化；buffer的主行为由major-mode确定。
+
+查看一下变量auto-mode-alist，这个变量的值看起来是这样的：
+#+BEGIN_SRC emacs-lisp
+    (("\\.el" . lisp-mode)
+     ("\\.c\\'" . c-mode)
+     ("\\.py[iw]?\\'" . python-mode)
+     ("\\.jsx$" . rjsx-mode)
+     ("\\.html?\\'" . web-mode)
+     ...)
+#+END_SRC
+
+这个alist的key是用来判断文件名的正则表达式，value是对应的mode，mode实际上是一个特殊的函数；它的作用就是在加载对应的文件名称时加载对应的major-mode。例如，如果是.c文件则自动使用c-mode。我们可以通过修改这个alist来修改emacs对于编辑不同文件的行为。例如：
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+#+END_SRC
+
+这样.js文件就会默认使用js2-mode来加载。
+
+而当我们临时希望变更某个buffer的时候怎么做呢？直接执行对应的函数就可以了。例如在js文件默认使用了rjsx-mode，需要临时切换为js2-mode，则直接：
+#+BEGIN_SRC emacs-lisp
+  M-x js2-mode
+#+END_SRC
+
+* Hook
+hook是一种list类型的变量，它们的作用是在特定情况下执行列表里的函数。每个mode一般都会定义一些hook，而一般都会有一个xxx-mode-hook，它的作用是在加载这个mode的时候执行其中包含的函数。例如，如果想在加载js2-mode的时候执行自定义的配置函数custom-js-function，那么可以这么写：
+#+BEGIN_SRC emacs-lisp
+  (add-hook  'js2-mode-hook 'custom-js-function)
+#+END_SRC
+
+或者希望enable一些minor hook，可以：
+#+BEGIN_SRC emacs-lisp
+  (add-hook  'js2-mode-hook 'some-mode)
+#+END_SRC
+
+* Key Map
+有的mode有自己的快捷键定义，名字一般为xxx-mode-map。快捷键的优先级为minor-mode-map > major-mode-map > global-map。
+
+定义全局快捷键的例子：
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "s-s") 'custom-save-buffer)
+#+END_SRC
+
+修改某个map的例子：
+#+BEGIN_SRC emacs-lisp
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+#+END_SRC
+
+其中kbd用来将键位定义字符串转换为emacs内部的键位表示。更多可以参看这里：http://ergoemacs.org/emacs/keyboard_shortcuts_examples.html。
+
+* Minor Mode
+有时我们希望某些功能的使用可以更为灵活。例如，自动匹配括号的插件smartparens，我们希望在编辑所有语言的时候都具有这种功能，而不与某种特定的buffer有关。emacs提供了minor mode来提供此种功能。
+每个buffer有且只有一个major mode，但minor mode则是完全自由的。有的minor mode会提供默认全局打开的方法，例如
+
+#+BEGIN_SRC emacs-lisp
+  (smartparens-global-mode t)
+#+END_SRC
+
+而更常用的可能是在major mode的hook里enable minor mode，例如
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'web-mode-hook 'emmet-mode)
+#+END_SRC
+
+与major mode类似的，如果希望手动打开、关闭minor mode，可以直接用M-x的方式做到。
+

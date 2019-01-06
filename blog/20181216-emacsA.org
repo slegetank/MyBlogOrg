@@ -1,0 +1,41 @@
+#+TITLE: 附录A
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-12-16 20:13>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+#+END_COMMENT
+
+提供一些emacs常用的网址，可以进行更深入的学习参考：
+
+* 文章
++ 一篇很好的elisp教程
+  http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+
++ 一年成为 Emacs 高手 (像神一样使用编辑器)
+  https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/guide-zh.org
+
++ Sacha Chua的博客，很有黑客品味的一个女程序员
+  http://sachachua.com/blog/
+
++ emacs好文章的一个集合，一些优秀博主会定期更新在这
+  http://planet.emacsen.org/
+
++ 视频教程
+  https://cestlaz.github.io/stories/emacs/
+
++ 灰常有名
+  http://emacsrocks.com
+
+* 配置
++ spacemacs，emacs配置的社区版，大而全，可以用来抄配置
+  https://github.com/syl20bnr/spacemacs
+
++ Sacha Chua's Emacs configuration
+  http://pages.sachachua.com/.emacs.d/Sacha.html
+
++ purcell的配置
+  https://github.com/purcell/emacs.d

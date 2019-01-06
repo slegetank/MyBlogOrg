@@ -1,0 +1,324 @@
+#+TITLE: elisp
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2018-12-16 20:04>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+简单介绍一下elisp。
+
+#+END_COMMENT
+
+现代编辑器一般都提供了一些脚本语言用于用户自己的定制，而Emacs毫无疑问是其中的佼佼者。elisp是Emacs的灵魂所在，不会写elisp也就无法体会到Emacs所提供的灵活自由。
+
+lisp for "List Processor"，elisp是lisp专用于emacs的方言。lisp的标志性语法结构是它的括号，这里不多吐槽。下面简单介绍一下配置所需要了解的语法知识。
+
+在学习的时候，可以打开scratch buffer,在其中试一下。将光标移动到表达式的结尾按下C-x C-e可以对前面的表达式进行求值。
+
+* 开始
+lisp的语法与主流语言有两个标志性的区别：
+1. 前缀操作符
+   即操作符在表达式的最前面，好处首先就是没有了其他语言的“优先级”问题。
+   #+BEGIN_SRC emacs-lisp
+    (+ 3 4)
+   #+END_SRC
+   
+2. 括号
+   lisp一直为人诟病的语法结构。习惯了还好，无非就是作用域的结构。当然如果习惯了python这种从设计上就去括号化的语言，可能会对这不爽。
+
+elisp作为lisp的方言，以我的观点来看不用太深入学习，因为只是作为配置的话并用不到多么高深的语言技巧与抽象层次，所以只要把基本的一些语法掌握了就可以了。
+
+* 数据类型
+** 基本数据类型
+#+BEGIN_SRC emacs-lisp
+  3 ;; int
+  3.5 ;; float
+  "string" ;; string
+  t ;; bool
+  nil ;; 空
+#+END_SRC
+
+** 符号
+如SICP中所述，编程最重要的两个概念就是抽象和分层。简单来说，抽象即命名；复杂点说，抽象即将事物的复杂性隐去，而以其名称对其操作。lisp中用符号（symbol）来完成这一操作。elisp中，数据与函数分别在不同的命名空间（scheme只有一个命名空间，详见：[[https://stackoverflow.com/questions/4578574/what-is-the-difference-between-lisp-1-and-lisp-2][stackoverflow]]），即函数与变量可以具有相同的名字。
+
+全局变量：
+#+BEGIN_SRC emacs-lisp
+  (setq a1 3) ;;  -> 3
+  (defvar a1 3 "temp varlue") ;; -> 3
+#+END_SRC
+
+在行末按下C-x C-e，minibuffer会显示"3 (#o3, #x3, ?\C-c)"。此时，在整个emacs的全局都可以访问到一个名为a1的变量，其值为3。defvar跟setq功能相同，只是多了个可选的文档字符串。这在编写插件的时候有用，自己维护配置可以直接使用setq。
+
+局部变量：
+#+BEGIN_SRC emacs-lisp
+  (let ((a2 3)
+        a3)
+    (setq a3 1)
+    (message "%s %s" a2 a3))
+  ;; -> 3 1
+
+  (let* ((a2 3)
+         (a3 a2))
+    (message "%s %s" a2 a3))
+  ;; -> 3 3
+#+END_SRC
+
+let结构有两种：let与let*。let的结构是这样的：
+#+BEGIN_SRC emacs-lisp
+  (let ((var1 val1)
+        (var2 val2)
+        ...)
+    body)
+#+END_SRC
+
+第一个列表用于临时变量的声明赋值；后面的语句是body，它们能使用上面声明的变量。当超出let的括号时，这些临时变量就被释放了。
+let中变量列表的赋值顺序是不定的，因此在第一个例子里a3无法使用a2的值；而let*中后面变量的声明可以使用前面变量的值。
+
+** 复合数据结构
+如果说抽象是纵向的复杂性的话，复合数据就是横向的扩展。《道德经》有云：“道生一,一生二,二生三,三生万物”。lisp复合数据结构的构建向我们展示了这一点。
+
+空表：
+#+BEGIN_SRC emacs-lisp
+  '() == (quote ()) == nil
+#+END_SRC
+
+可以看到一个'，这个符号被称为引用符（quote）。它的作用是表示后面的表不立即求值，而把其当作一个字面值处理。例如：
+#+BEGIN_SRC emacs-lisp
+  (+ 1 2) ;; -> 3
+  '(+ 1 2) ;; -> (+ 1 2)
+
+  (setq testquote '(+ 1 2))
+  (apply testquote) ;; 3
+#+END_SRC
+
+两个基本类型的数据可以组合成一个称为序对（cons cell）的结构：
+#+BEGIN_SRC emacs-lisp
+  (setq two (cons 1 2)) ;; (1 . 2)
+  (car two) ;; 1
+  (cdr two) ;; 2
+#+END_SRC
+
+cons用于构建序对，car用于取前面的元素，cdr用于取后面的元素(序对与list的区别就是list的最后一个元素为nil)。而按照这种形式可以构成任意长度的表：
+#+BEGIN_SRC emacs-lisp
+  (setq three (cons 1 (cons 2 (cons 3 nil))))
+  ;; 等价于
+  (setq three (list 1 2 3))
+
+  (car three) ;; 1
+  (cdr three) ;; (2 3)
+#+END_SRC
+
+因此可以把list看成由很多序对组成的链表，其中每个序对的cdr指向另一个序对，最后一个序对的cdr指向空表。list函数可以看作一个语法糖。
+
+** alist
+那么字典怎么实现呢，即以key的形式直接访问元素？lisp中提供了一种称为[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Association-Lists.html][association list]]（a-list）的结构来达到这种效果。它的结构是这样的：
+#+BEGIN_SRC emacs-lisp
+  (setq color-alist '((red . "ff0000")
+                      (green . "00ff00")
+                      (blue . "0000ff")))
+#+END_SRC
+
+而使用内置的assoc函数可以进行取操作：
+
+#+BEGIN_SRC emacs-lisp
+  (setq green-item (assoc 'green color-alist)) -> (green . "00ff00") ;; item
+  (car green-item) -> green ;; key
+  (cdr green-item) -> "00ff00" ;; value
+#+END_SRC
+
+alist中对于key-value的替换是这样做的：
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'color-alist '(green . "00ff01")) -> ((green . "00ff01") (red . "ff0000") (green . "00ff00") (blue . "0000ff"))
+  (cdr (assoc 'green color-alist)) -> "00ff01"
+#+END_SRC
+
+即前面的同key的元素会替换后面的。其他操作见官方文档。
+
+* 控制结构
+共有三种，分别是顺序、条件和循环（scheme没有循环，而用递归代替了循环）。
+** 顺序
+#+BEGIN_SRC emacs-lisp
+  (progn expr1 expr2 ...)
+#+END_SRC
+
+progn的作用就是将多条表达式合并成一条，返回值为最后执行的语句；在有的结构里必须这么写，例子见下面的if结构。还有个prog1，它的返回值是第一条表达式的值。
+
+** 条件
+*** if
+#+BEGIN_SRC emacs-lisp
+  (if test
+      then
+    else1 else2 ...)
+#+END_SRC
+
+第一个list是条件，第二个list是t的时候执行的表达式，后面跟着的其他语句是nil的时候执行的表达式。返回值为最后执行的语句。例如：
+
+#+BEGIN_SRC emacs-lisp
+  (let ((a2 3))
+    (if (> a2 1)
+        (progn
+          (setq a2 2)
+          (message "Right %s" a2))
+      (message "Wrong %s" a2)))
+
+  ;; -> Right 2
+#+END_SRC
+
+还有两个简化版本的if：
++ when
+  没有else分支的if：
+  #+BEGIN_SRC emacs-lisp
+    (let ((a2 3))
+        (when (> a2 1)
+        (message "hello")))
+  #+END_SRC
+
++ unless
+  if的else分支：
+  #+BEGIN_SRC emacs-lisp
+    (let ((a2 3))
+        (unless (< a2 1)
+        (message "hello")))
+  #+END_SRC
+
+*** cond
+多条件语句，返回值为最后执行的语句。
+#+BEGIN_SRC emacs-lisp
+  (cond ((test1 body11 body12 ...)
+         (test2 body21 body22 ...)
+         ...
+         (t bodyn1 bodyn2 ...)))
+#+END_SRC
+
+例如：
+#+BEGIN_SRC emacs-lisp
+  (let ((a4 4))
+    (cond ((> a4 3) (message "1") (message ">"))
+          ((= a4 3) (message "1") (message "="))
+          ((< a4 3) (message "1") (message "<"))))
+
+  ;; ->
+  ;; 1
+  ;; >
+  ;; ">"
+#+END_SRC
+
+*** 逻辑语句
+逻辑语句是经常使用的一种控制语句，返回值为最后执行的语句。
+
++ and会顺序执行表达式，直到遇到nil。所以返回值为nil或者最后一个语句。通常，
+  #+BEGIN_SRC emacs-lisp
+    (if expr1
+        (if expr2
+            ..
+        (if exprn-1 exprn)))
+  #+END_SRC
+  简写作
+  #+BEGIN_SRC emacs-lisp
+    (and expr1 exp2 ...)
+  #+END_SRC
+
++ or会顺序执行表达式，直到遇到一个非nil。所以返回值为第一个非nil的值。
+  #+BEGIN_SRC emacs-lisp
+    (if a a b)
+  #+END_SRC
+  简写作
+  #+BEGIN_SRC emacs-lisp
+    (or a b)
+  #+END_SRC
+
++ not为非：
+  #+BEGIN_SRC emacs-lisp
+    (not expr)
+  #+END_SRC
+** 循环
+*** while
+返回值为nil。
+#+BEGIN_SRC emacs-lisp
+  (while test
+    body1 body2 ...)
+#+END_SRC
+
+例如：
+#+BEGIN_SRC emacs-lisp
+  (let ((count 3))
+    (while (> count 0)
+      (message "%d" count)
+      (setq count (1- count))))
+  ;; 3
+  ;; 2
+  ;; 1
+  ;; nil
+#+END_SRC
+
+*** dolist
+elisp提供了更方便的对list的遍历方法，返回值为nil。
+#+BEGIN_SRC emacs-lisp
+  (let ((templist '(1 2 3)))
+    (dolist (var templist)
+      (message "%d" var)))
+  ;; 3
+  ;; 2
+  ;; 1
+  ;; nil
+#+END_SRC
+
+* 函数
+按照scheme的看法，函数与数据并没有什么区别，但elisp中还是有区别的。
+
+#+BEGIN_SRC emacs-lisp
+  (setq func1 (lambda () (message "hello")))
+  (funcall func1)
+
+  ;; scheme可以直接调用
+  ;; (func1)
+#+END_SRC
+
+elisp提供了更显式的函数定义方式：
+#+BEGIN_SRC emacs-lisp
+  (defun func1 ()
+    (message "hello"))
+  (func1) ;; -> "hello"
+#+END_SRC
+
+这两种方式在elisp中的符号分别储存在不同的命名空间。现在我们仔细看一下defun。
+
+#+BEGIN_SRC emacs-lisp
+  (defun name (arg1 arg2)
+    "document string"
+    (interactive)
+    body)
+#+END_SRC
+
+一个常见的defun是这样的。第一个元素为函数名，后面的列表是参数列表，参数可以使用&rest和&optional修饰；下面有一个可选的文档字符串以及一个可选的声明列表，最常见的就是(interactive)，表示这个函数是一个可交互的函数，即用户可以通过关联快捷键或者M-x的方式直接调用该函数。对于不需要名字的函数，可以使用lambda表达式：
+#+BEGIN_SRC emacs-lisp
+  (bind-key (kbd "C-c C-1") (lambda () (interactive) (message "hello")) global-map)
+#+END_SRC
+
+** 修饰
+可以在不修改源代码的情况下对函数进行修饰，具体参照[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Advice-combinators.html][文档]]。在插件之间相互冲突，或者希望微调第三方插件时这个功能很好用。
+修饰可以对在函数调用前对其参数进行修改；或者修改函数的返回值；我们经常用修饰对第三方插件的一些bug或者其他冲突做修正而不必改动插件内的代码。这里提供一个例子：
+
+#+BEGIN_SRC emacs-lisp
+  (defun example-func (p1 p2 p3)
+    (message "%d %d %d" p1 p2 p3))
+
+  (defun example-advice (oldfunc &rest args)
+    (setcar (nthcdr 1 args) 0)
+    (apply oldfunc args))
+
+  (example-func 1 2 3)
+  ;; -> "1 2 3"
+
+  (advice-add 'example-func :around 'example-advice)
+  (example-func 1 2 3)
+  ;; -> "1 0 3"
+#+END_SRC
+
+* 宏
+在配置中基本上用不到，我实际上也并不是很熟悉。从概念上来说就是用来生成代码的代码。据说是lisp真正强大的地方，有兴趣可以自己研究。
+
+* 作用域
+elisp的作用域默认为dynamic binding，具体参照[[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding][wiki]]。

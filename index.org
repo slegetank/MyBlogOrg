@@ -2,6 +2,181 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20190101-thegrandchessboard.org][大棋局 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190101-thegrandchessboard.html
+  :PUBDATE:  <2019-01-01 13:22>
+  :END:
+<2019-01-01 13:22> | Book
+
+
+简而言之，美国作为世界上首要的大国确实面对着一个并不很宽的历史性机会之窗。
+
+[[file:blog/20190101-thegrandchessboard.org][Read More...]]
+-----
+* [[file:blog/20181226-PowerandProsperity.org][权力与繁荣 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181226-PowerandProsperity.html
+  :PUBDATE:  <2018-12-26 12:28>
+  :END:
+<2018-12-26 12:28> | Book
+
+
+
+[[file:blog/20181226-PowerandProsperity.org][Read More...]]
+-----
+* [[file:blog/20181216-emacsA.org][附录A]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacsA.html
+  :PUBDATE:  <2018-12-16 20:13>
+  :END:
+<2018-12-16 20:13> | Emacs
+
+
+[[file:blog/20181216-emacsA.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs8.org][工作流分享]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs8.html
+  :PUBDATE:  <2018-12-16 20:12>
+  :END:
+<2018-12-16 20:12> | Emacs
+
+
+分享一下工作流。
+
+[[file:blog/20181216-emacs8.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs7.org][搜索与替换]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs7.html
+  :PUBDATE:  <2018-12-16 20:10>
+  :END:
+<2018-12-16 20:10> | Emacs
+
+
+在工程中搜索、替换是程序员的必要技能。
+
+[[file:blog/20181216-emacs7.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs6.org][文件访问]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs6.html
+  :PUBDATE:  <2018-12-16 20:09>
+  :END:
+<2018-12-16 20:09> | Emacs
+
+
+Emacs的强大特性之一就是对于文件的查找、操作、管理。
+
+[[file:blog/20181216-emacs6.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs5.org][基础包]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs5.html
+  :PUBDATE:  <2018-12-16 20:07>
+  :END:
+<2018-12-16 20:07> | Emacs
+
+
+有些包是基础包，它们会极大的改变emacs默认的操作方式。
+
+[[file:blog/20181216-emacs5.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs4.org][开始]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs4.html
+  :PUBDATE:  <2018-12-16 20:06>
+  :END:
+<2018-12-16 20:06> | Emacs
+
+
+配置代码组织以及一些常用的配置。
+
+[[file:blog/20181216-emacs4.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs3.org][Mode]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs3.html
+  :PUBDATE:  <2018-12-16 20:05>
+  :END:
+<2018-12-16 20:05> | Emacs
+
+
+描述emacs编辑行为的核心概念mode。
+
+[[file:blog/20181216-emacs3.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs2.org][elisp]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs2.html
+  :PUBDATE:  <2018-12-16 20:04>
+  :END:
+<2018-12-16 20:04> | Emacs
+
+
+简单介绍一下elisp。
+
+[[file:blog/20181216-emacs2.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs1.org][基础]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs1.html
+  :PUBDATE:  <2018-12-16 20:03>
+  :END:
+<2018-12-16 20:03> | Emacs
+
+
+Emacs的一些最基本的概念。
+
+[[file:blog/20181216-emacs1.org][Read More...]]
+-----
+* [[file:blog/20181216-emacs0.org][前言]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181216-emacs0.html
+  :PUBDATE:  <2018-12-16 20:02>
+  :END:
+<2018-12-16 20:02> | Emacs
+
+
+前言
+
+[[file:blog/20181216-emacs0.org][Read More...]]
+-----
+* [[file:blog/20181117-americanclass.org][格调 - 社会等级与生活品味 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181117-americanclass.html
+  :PUBDATE:  <2018-11-17 12:55>
+  :END:
+<2018-11-17 12:55> | Book
+
+
+事实是，正因为这是一个民主国家，等级差别比任何其他地方都更加生机勃勃。
+
+[[file:blog/20181117-americanclass.org][Read More...]]
+-----
+* [[file:blog/20181101-coffee.org][你不懂咖啡 总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181101-coffee.html
+  :PUBDATE:  <2018-11-01 13:25>
+  :END:
+<2018-11-01 13:25> | Book
+
+
+喝了这么多咖啡，还是觉得家里20块钱一斤的大叶子茶好喝。
+
+[[file:blog/20181101-coffee.org][Read More...]]
+-----
+* [[file:blog/20181020-wine.org][你不懂葡萄酒 总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20181020-wine.html
+  :PUBDATE:  <2018-10-20 15:25>
+  :END:
+<2018-10-20 15:25> | Book
+
+
+[[file:blog/20181020-wine.org][Read More...]]
+-----
 * [[file:blog/20181007-1587.org][万历十五年 读后总结]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20181007-1587.html
@@ -488,3 +663,12 @@ Dired作为emacs的目录管理工具，必学。
 博客迁移。
 Bundle的应用，虽然这玩意到现在还是没有什么实用价值。
 [[file:blog/20130304-plugin.org][Read More...]]
+-----
+* [[file:blog/.#20180517-chinaarise.org][]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/.#20180517-chinaarise.html
+  :PUBDATE:
+  :END:
+ | 
+
+[[file:blog/.#20180517-chinaarise.org][Read More...]]
