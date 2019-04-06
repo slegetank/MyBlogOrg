@@ -1,0 +1,100 @@
+#+TITLE: emacs内置中文输入法
+#+AUTHOR: slegetank
+#+EMAIL: slege_tank@163.com
+#+DATE: <2019-03-31 18:46>
+#+SETUPFILE: ~/.emacs.d/org-template/level-1.org
+#+blogtype: Emacs
+
+#+BEGIN_COMMENT PREVIEW
+
+真香
+
+#+END_COMMENT
+
+我的配置见 https://github.com/slegetank/.emacs.d/blob/master/init/init-chinese.org
+
+为什么不用搜狗呢？因为个人数据无法导出。所以选择了鼠须管。
+
+为什么不用五笔呢？自己比较笨，学了几次实在学不会。
+
+为什么要配置一个内置的输入法呢？最大的原因是由于vim模式切换很痛苦。normal-state的时候切回英文，insert-state的时候再切回去，在mac上是无法做到的。之前试过https://github.com/Lutzifer/keyboardSwitcher， 在切换的时候通过命令行切换输入法，但发现虽然系统状态栏上的变化了，但实际却并没有切换成中文。最终还是决定痛下杀手，折腾一番。
+
+* pyim
+https://github.com/tumashu/pyim
+
+内置的感觉是真的好。具体配置官方文档已经很清楚了，这里不做赘述。也可以参考我的配置。
+
+[[file:../static/20190331-emacschinese-0.png]]
+
+* liberime
+但是，pyim原生的全拼补全实在是捉鸡。鼠须管虽然输入生词上仍然不如搜狗，但毕竟比pyim好太多了。pyim现在也支持了使用liberime作为后端，官方文档见：https://github.com/tumashu/pyim “通过-pyim-来支持-rime-所有输入法”小节。
+
+liberime的作用是使用rime的librime作为后端，提供一个elisp的封装供pyim调用。
+
+* 编译librime
+首先编译librime，文档：https://gitlab.com/liberime/liberime/blob/master/README.org， MacOS的文档https://github.com/rime/librime/blob/master/README-mac.md 。
+
+具体来说：
+1. 准备
+   需要XCode。
+   #+BEGIN_SRC shell
+     brew install cmake git
+     brew install boost@1.60
+     brew link --overwrite --force boost@1.60
+   #+END_SRC
+
+2. 下载源码
+   #+BEGIN_SRC shell
+     cd ~
+     git clone --recursive https://github.com/rime/librime.git
+   #+END_SRC
+
+3. 编译
+   #+BEGIN_SRC shell
+     cd librime
+     # 编译第三方库
+     make xcode/thirdparty
+     # 编译librime
+     make xcode
+   #+END_SRC
+注意，不要删除这个文件夹。liberime只是一个动态库，最终还是要调用这里的编译结果。
+
+* 编译liberime
+编译完成后，就可以编译liberime了。
+1. 下载源码
+   #+BEGIN_SRC shell
+     git clone https://gitlab.com/liberime/liberime.git
+   #+END_SRC
+
+2. 编译
+   #+BEGIN_SRC shell
+     # 指向刚才编译的librime文件夹
+     export RIME_PATH=~/librime
+     cd liberime
+     make liberime
+     cd build
+     # 将动态库拷贝到需要的目录
+     cp liberime.so ~/ScriptHelper
+   #+END_SRC
+   
+   如果报错：
+   #+BEGIN_SRC shell
+     ld: warning: directory not found for option '-L/Users/shuaizhao/librime/xbuild/lib/Release'
+     ld: library not found for -lrime
+     clang: error: linker command failed with exit code 1 (use -v to see invocation)
+   #+END_SRC
+
+   则修改CMakeLists.txt中的xbuild为build。
+
+* 配置
+这里以我的配置作为例子：
+#+BEGIN_SRC emacs-lisp
+  ;; 指向liberime.so所在的路径
+  (setq load-path (cons (expand-file-name "~/ScriptHelper") load-path))
+  (require 'liberime)
+  ;; 第一个参数是共享文件夹，见https://github.com/rime/home/wiki/SharedData
+  ;; 第二个参数是个人文件夹，推荐放到~/.emacs.d/rime/
+  (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" "~/.emacs.d/rime")
+  (liberime-select-schema "luna_pinyin_simp")
+  (setq pyim-default-scheme 'rime-quanpin)
+#+END_SRC

@@ -3,6 +3,9 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * 2019
+** [[file:blog/20190331-emacschinese.org][<2019-03-31 18:46> emacs内置中文输入法]]
+** [[file:blog/20190331-daduhe.org][<2019-03-31 16:51> 非常突破 1935年大渡河之役详考]]
+** [[file:blog/20190317-from0to1.org][<2019-03-17 15:57> 从0到1 开启商业与未来的秘密 读后总结]]
 ** [[file:blog/20190101-thegrandchessboard.org][<2019-01-01 13:22> 大棋局 读后总结]]
 
 * 2018
@@ -68,6 +71,3 @@
 ** [[file:blog/20130401-MVC.org][<2013-04-01 17:31> iOS开发基础之MVC模式]]
 ** [[file:blog/20130305-bundle.org][<2013-03-05 11:32> iOS插件化开发之bundle]]
 ** [[file:blog/20130304-plugin.org][<2013-03-04 15:44> iOS插件化开发概述]]
-
-* 
-** [[file:blog/.#20180517-chinaarise.org][ ]]

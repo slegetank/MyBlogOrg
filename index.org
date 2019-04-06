@@ -2,6 +2,42 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20190331-emacschinese.org][emacs内置中文输入法]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190331-emacschinese.html
+  :PUBDATE:  <2019-03-31 18:46>
+  :END:
+<2019-03-31 18:46> | Emacs
+
+
+真香
+
+[[file:blog/20190331-emacschinese.org][Read More...]]
+-----
+* [[file:blog/20190331-daduhe.org][非常突破 1935年大渡河之役详考]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190331-daduhe.html
+  :PUBDATE:  <2019-03-31 16:51>
+  :END:
+<2019-03-31 16:51> | Book
+
+
+昼夜兼程二百四 猛打穷追夺泸定
+
+[[file:blog/20190331-daduhe.org][Read More...]]
+-----
+* [[file:blog/20190317-from0to1.org][从0到1 开启商业与未来的秘密 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190317-from0to1.html
+  :PUBDATE:  <2019-03-17 15:57>
+  :END:
+<2019-03-17 15:57> | Book
+
+
+事实上，资本主义和竞争的概念恰恰相反。资本主义基于资本的累积，而如果处于完全竞争之下，利润就会消失。
+
+[[file:blog/20190317-from0to1.org][Read More...]]
+-----
 * [[file:blog/20190101-thegrandchessboard.org][大棋局 读后总结]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20190101-thegrandchessboard.html
@@ -663,12 +699,3 @@ Dired作为emacs的目录管理工具，必学。
 博客迁移。
 Bundle的应用，虽然这玩意到现在还是没有什么实用价值。
 [[file:blog/20130304-plugin.org][Read More...]]
------
-* [[file:blog/.#20180517-chinaarise.org][]]
-  :PROPERTIES:
-  :RSS_PERMALINK: blog/.#20180517-chinaarise.html
-  :PUBDATE:
-  :END:
- | 
-
-[[file:blog/.#20180517-chinaarise.org][Read More...]]
