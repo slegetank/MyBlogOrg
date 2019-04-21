@@ -90,11 +90,15 @@ liberime的作用是使用rime的librime作为后端，提供一个elisp的封�
 这里以我的配置作为例子：
 #+BEGIN_SRC emacs-lisp
   ;; 指向liberime.so所在的路径
-  (setq load-path (cons (expand-file-name "~/ScriptHelper") load-path))
+  (setq load-path (cons (file-truename "~/ScriptHelper") load-path))
   (require 'liberime)
   ;; 第一个参数是共享文件夹，见https://github.com/rime/home/wiki/SharedData
-  ;; 第二个参数是个人文件夹，推荐放到~/.emacs.d/rime/
-  (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" "~/.emacs.d/rime")
+  ;; 第二个参数是个人文件夹
+  ;; 注意：设置的时候最好不要使用软链接，也不要使用 "~" 和相对路径，liberime有时候无法处理。
+  (liberime-start "/Library/Input Methods/Squirrel.app/Contents/SharedSupport" (file-truename "~/.emacs.d/pyim/rime/"))
   (liberime-select-schema "luna_pinyin_simp")
   (setq pyim-default-scheme 'rime-quanpin)
 #+END_SRC
+
+** 上屏问题
+https://github.com/tumashu/pyim/issues/261
