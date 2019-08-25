@@ -31,8 +31,26 @@ https://github.com/tumashu/pyim
 
 liberime的作用是使用rime的librime作为后端，提供一个elisp的封装供pyim调用。
 
-* 编译librime
-首先编译librime，文档：https://gitlab.com/liberime/liberime/blob/master/README.org， MacOS的文档https://github.com/rime/librime/blob/master/README-mac.md 。
+首先下载源码：
+#+BEGIN_SRC shell
+  cd ~
+  git clone --recursive https://github.com/rime/librime.git
+#+END_SRC
+
+** 直接拷贝
+如果你本身是rime的用户，那么可以直接拷贝：
+#+BEGIN_SRC emacs-lisp
+  mkdir -p ~/librime/xbuild/lib/Release/
+
+  ;; 直接拷贝，用于编译liberime
+  cp /Library/Input\ Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ~/librime/xbuild/lib/Release/librime.dylib
+
+  ;; emacs里使用但时候会动态链接这个库
+  sudo cp /Library/Input\ Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib /usr/local/lib
+#+END_SRC
+
+** 编译librime
+你也可以选择自己编译。文档：https://gitlab.com/liberime/liberime/blob/master/README.org， MacOS的文档https://github.com/rime/librime/blob/master/README-mac.md 。
 
 具体来说：
 1. 准备
@@ -60,7 +78,7 @@ liberime的作用是使用rime的librime作为后端，提供一个elisp的封�
 注意，不要删除这个文件夹。liberime只是一个动态库，最终还是要调用这里的编译结果。
 
 * 编译liberime
-编译完成后，就可以编译liberime了。
+liberime将会使用上面编译打结果来编译liberime。
 1. 下载源码
    #+BEGIN_SRC shell
      git clone https://gitlab.com/liberime/liberime.git
@@ -102,3 +120,5 @@ liberime的作用是使用rime的librime作为后端，提供一个elisp的封�
 
 ** 上屏问题
 https://github.com/tumashu/pyim/issues/261
+
+解法暂时是将上屏词语的数量提高。

@@ -2,6 +2,76 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20190825-rime.org][Rime输入法同步]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190825-rime.html
+  :PUBDATE:  <2019-08-25 15:43>
+  :END:
+<2019-08-25 15:43> | Tools
+
+
+更香了
+
+[[file:blog/20190825-rime.org][Read More...]]
+-----
+* [[file:blog/20190623-sanguozhiyi.org][三国志异 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190623-sanguozhiyi.html
+  :PUBDATE:  <2019-06-23 12:48>
+  :END:
+<2019-06-23 12:48> | Book
+
+
+后世眼中，前三国所以比后三国传奇，不在于后三国人才凋零：实际上，后三国极多问文武全文武全才的人物，但大多都太聪明。
+
+[[file:blog/20190623-sanguozhiyi.org][Read More...]]
+-----
+* [[file:blog/20190522-crosswall.org][科学上网]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190522-crosswall.html
+  :PUBDATE:  <2019-05-22 10:49>
+  :END:
+<2019-05-22 10:49> | Tools
+
+
+翻墙
+
+[[file:blog/20190522-crosswall.org][Read More...]]
+-----
+* [[file:blog/20190512-GunsGermsSteel.org][枪炮、病菌与钢铁 － 人类社会的命运 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190512-GunsGermsSteel.html
+  :PUBDATE:  <2019-05-12 17:19>
+  :END:
+<2019-05-12 17:19> | Book
+
+
+各大陆民族长期历史之间的显著差异，不是源自这些民族本身的天生差异，而是源自他们环境的差异。
+
+[[file:blog/20190512-GunsGermsSteel.org][Read More...]]
+-----
+* [[file:blog/20190509-iotroad.org][物联网应用路线图]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190509-iotroad.html
+  :PUBDATE:  <2019-05-09 09:13>
+  :END:
+<2019-05-09 09:13> | Book
+
+
+软件的关键不在于编写代码，而在于将软件所能够实现的状态以服务的形式提供给用户，并且以此来引领社会的发展。
+
+[[file:blog/20190509-iotroad.org][Read More...]]
+-----
+* [[file:blog/20190421-emacsprofile.org][如何定位emacs卡顿的问题]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190421-emacsprofile.html
+  :PUBDATE:  <2019-04-21 15:39>
+  :END:
+<2019-04-21 15:39> | Emacs
+
+
+[[file:blog/20190421-emacsprofile.org][Read More...]]
+-----
 * [[file:blog/20190331-emacschinese.org][emacs内置中文输入法]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20190331-emacschinese.html

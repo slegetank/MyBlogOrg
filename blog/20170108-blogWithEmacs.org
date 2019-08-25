@@ -50,7 +50,7 @@
 ** 自定义sitemap
 在使用中，我发现自己还是需要一个自定义的sitemap的--emacs提供的默认sitemap太简单了。自定义只要将函数名传入到":sitemap_function"，在生成网站的时候会自动调用。函数的原理很简单，就是遍历org目录下的所有文章，取到我们需要的文章属性信息，例如title/link/date等；然后将这些信息插入到一个指定的org文件里，例如作为首页的index.org或者sitemap.org，然后利用emacs将其导出成html。其中，对于每篇文章的preview的想法来自[[https://ogbe.net/blog/blogging_with_org.html][这里]] 。
 ** 自定义功能
-*** 初始化(bi - blog init)
+*** 初始化(bli - blog init)
 我的博客文章都有如下共性：
 + 文件名为“时间戳+文章名.org”。
 + 草稿文件保存在draft文件夹里。
@@ -70,14 +70,21 @@
 [[file:../static/20170108-blogWithEmacs-1.gif]]
 
 这样，文章的初始化就完成了。
-*** 草稿发布(bp - blog publish)
+*** 草稿发布(blf - blog finish draft)
 草稿的发布就是将org文件从draft拷贝到org文件夹。这个命令就做了这件事，顺便问一下是否要将博客commit一下。
-*** 博客生成(bc - blog commit)
+
+*** 提交(blc - blog commit)
 我将org文件的导出以及commit做了一个整合，变成了这个命令。也就是将org文件导出生成html文件，然后使用固定格式的message提交更改。这样看起来提交的记录会变得非常整洁：
 [[file:../static/20170108-blogWithEmacs-2.png]]
+
+博客文件多了之后，每次全量更新会很慢，所以也需要考虑只publish更改的博客文件。我目前的做法是把每个博客文件的md5计算出来保存在文件当中，每次publish的时候与其对比，有变化或新增的才publish，这样就很快了。
+
+*** 部署(bld - blog deploy)
+所谓静态博客的部署也就是git push到对应的远程仓库里。github自是不必说，官方文档在这：https://pages.github.com/ 。国内的话，之前的coding被腾讯收购了，官方文档在这：https://dev.tencent.com/help/doc/quick-start/creating-pages 。按照文档建立好各自的仓库之后，只需要push一下就可以了（腾讯云还需要自己手动部署一下，也没什么麻烦的）。
 
 *** 插入图片
 在org中插入图片用手输入的话太麻烦了，从[[http://kitchingroup.cheme.cmu.edu/blog/2015/07/10/Drag-images-and-files-onto-org-mode-and-insert-a-link-to-them/][这里]] 我学到了可以通过拖拽的方式添加图片的链接。我做了一点修改：当发现当前org文件为博客文章时，将会自动把图片拷贝到static文件夹下，按照命名规则命名并递增序号，并且将相对路径添加到文件里。完美！
 [[file:../static/20170108-blogWithEmacs-3.gif]]
+
 * 结语
 用了上面的配置之后，用org mode写文档变得相当享受。Happy hacking。

@@ -3,9 +3,12 @@
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
 * Tools
+** [[file:blog/20190825-rime.org][<2019-08-25 15:43> Rime输入法同步]]
+** [[file:blog/20190522-crosswall.org][<2019-05-22 10:49> 科学上网]]
 ** [[file:blog/20180422-imageprocess.org][<2018-04-22 18:33> 图像处理小记录]]
 
 * Emacs
+** [[file:blog/20190421-emacsprofile.org][<2019-04-21 15:39> 如何定位emacs卡顿的问题]]
 ** [[file:blog/20190331-emacschinese.org][<2019-03-31 18:46> emacs内置中文输入法]]
 ** [[file:blog/20181216-emacsA.org][<2018-12-16 20:13> 附录A]]
 ** [[file:blog/20181216-emacs8.org][<2018-12-16 20:12> 工作流分享]]
@@ -31,6 +34,9 @@
 ** [[file:blog/20151225-environment.org][<2015-12-25 10:49> 工作环境配置记录]]
 
 * Book
+** [[file:blog/20190623-sanguozhiyi.org][<2019-06-23 12:48> 三国志异 读后总结]]
+** [[file:blog/20190512-GunsGermsSteel.org][<2019-05-12 17:19> 枪炮、病菌与钢铁 － 人类社会的命运 读后总结]]
+** [[file:blog/20190509-iotroad.org][<2019-05-09 09:13> 物联网应用路线图]]
 ** [[file:blog/20190331-daduhe.org][<2019-03-31 16:51> 非常突破 1935年大渡河之役详考]]
 ** [[file:blog/20190317-from0to1.org][<2019-03-17 15:57> 从0到1 开启商业与未来的秘密 读后总结]]
 ** [[file:blog/20190101-thegrandchessboard.org][<2019-01-01 13:22> 大棋局 读后总结]]
