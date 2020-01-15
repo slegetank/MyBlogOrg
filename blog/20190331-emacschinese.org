@@ -45,7 +45,7 @@ liberime的作用是使用rime的librime作为后端，提供一个elisp的封�
   ;; 直接拷贝，用于编译liberime
   cp /Library/Input\ Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib ~/librime/xbuild/lib/Release/librime.dylib
 
-  ;; emacs里使用但时候会动态链接这个库
+  ;; emacs里使用的时候会动态链接这个库
   sudo cp /Library/Input\ Methods/Squirrel.app/Contents/Frameworks/librime.1.dylib /usr/local/lib
 #+END_SRC
 

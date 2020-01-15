@@ -2,6 +2,66 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* [[file:blog/20200114-singyoung.org][歌唱我动荡的青春]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20200114-singyoung.html
+  :PUBDATE:  <2020-01-14 15:55>
+  :END:
+<2020-01-14 15:55> | Other
+
+
+苏联时期的歌总是能把青年对于国家、对于未来的情怀唱的如此激昂
+
+[[file:blog/20200114-singyoung.org][Read More...]]
+-----
+* [[file:blog/20200111-winning.org][赢 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20200111-winning.html
+  :PUBDATE:  <2020-01-11 17:18>
+  :END:
+<2020-01-11 17:18> | Book
+
+
+Life is not easy for any of us. We must work, and above all we must believe in ourselves. We must believe that each one of us is able to do some thing well. And that we must work until we succeed.
+
+[[file:blog/20200111-winning.org][Read More...]]
+-----
+* [[file:blog/20191003-liutao.org][《六韬》 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20191003-liutao.html
+  :PUBDATE:  <2019-10-03 22:05>
+  :END:
+<2019-10-03 22:05> | Book
+
+
+是故人君从事于富。不富无以为仁，不施无以合亲。
+
+[[file:blog/20191003-liutao.org][Read More...]]
+-----
+* [[file:blog/20190926-baozoujunguo.org][暴走军国 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190926-baozoujunguo.html
+  :PUBDATE:  <2019-09-26 13:21>
+  :END:
+<2019-09-26 13:21> | Book
+
+
+不知我等是狂是愚，唯知一路奔驰。
+
+[[file:blog/20190926-baozoujunguo.org][Read More...]]
+-----
+* [[file:blog/20190908-TheManWhoChangedChina.org][他改变了中国 － 江泽民传 读后总结]]
+  :PROPERTIES:
+  :RSS_PERMALINK: blog/20190908-TheManWhoChangedChina.html
+  :PUBDATE:  <2019-09-08 14:21>
+  :END:
+<2019-09-08 14:21> | Book
+
+
+我为长者续一秒
+
+[[file:blog/20190908-TheManWhoChangedChina.org][Read More...]]
+-----
 * [[file:blog/20190825-rime.org][Rime输入法同步]]
   :PROPERTIES:
   :RSS_PERMALINK: blog/20190825-rime.html

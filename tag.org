@@ -2,6 +2,9 @@
 #+TITLE:Slegetank's Blog
 #+HTML_HEAD: <style type="text/css">.title{display:none;}</style>
 
+* Other
+** [[file:blog/20200114-singyoung.org][<2020-01-14 15:55> 歌唱我动荡的青春]]
+
 * Tools
 ** [[file:blog/20190825-rime.org][<2019-08-25 15:43> Rime输入法同步]]
 ** [[file:blog/20190522-crosswall.org][<2019-05-22 10:49> 科学上网]]
@@ -34,6 +37,10 @@
 ** [[file:blog/20151225-environment.org][<2015-12-25 10:49> 工作环境配置记录]]
 
 * Book
+** [[file:blog/20200111-winning.org][<2020-01-11 17:18> 赢 读后总结]]
+** [[file:blog/20191003-liutao.org][<2019-10-03 22:05> 《六韬》 读后总结]]
+** [[file:blog/20190926-baozoujunguo.org][<2019-09-26 13:21> 暴走军国 读后总结]]
+** [[file:blog/20190908-TheManWhoChangedChina.org][<2019-09-08 14:21> 他改变了中国 － 江泽民传 读后总结]]
 ** [[file:blog/20190623-sanguozhiyi.org][<2019-06-23 12:48> 三国志异 读后总结]]
 ** [[file:blog/20190512-GunsGermsSteel.org][<2019-05-12 17:19> 枪炮、病菌与钢铁 － 人类社会的命运 读后总结]]
 ** [[file:blog/20190509-iotroad.org][<2019-05-09 09:13> 物联网应用路线图]]
